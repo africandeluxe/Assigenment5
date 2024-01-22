@@ -22,8 +22,16 @@ nav {
 }
 
 nav ul {
+    display: none;
     list-style-type: none;
 }
+
+.hamburger-menu ul.submenu {
+    display: none;
+    flex-direction: column;
+    padding: var(--spacing-small)
+}
+
 
 
 
