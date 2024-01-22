@@ -5,6 +5,8 @@
   --primary-text-color: #eee;
   --background-color: linear-gradient(0deg, rgb(6, 5, 21) 50%, rgb(86, 0, 167) 120%);
   --primary-font-family: "K2D-Regular";
+  --secondary-font-family: "K2D-SemiBold";
+  --boldest-font-family: "K2D-Bold";
 }
 
 /* FONT PART */
