@@ -83,6 +83,26 @@ footer a {
   text-decoration: none;
 }
 
+.slides-container {
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#demo {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#demo div {
+  display: none;
+}
+#demo div img {
+  width: 90%;
+  height: auto;
+}
+
 @media screen and (min-width: 991px) {
 }
 
