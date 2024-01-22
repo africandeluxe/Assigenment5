@@ -64,11 +64,35 @@ nav ul {
   flex-direction: column;
   padding: var(--spacing-small);
 }
+main {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+ 
+}
 .content {
-  min-height: 70%;
-  padding: 60px;
+    align-self: center;
 }
 
+button .content {
+  display: flex;
+  justify-content: space-around;
+}
+button {
+  background: none;
+  margin: 0 10px 0 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  border: 1px solid #fff;
+}
+
+button a {
+  text-decoration: none;
+  color: var(--primary-text-color);
+  padding: 1.2rem;
+}
 footer {
   background: var(--primary-gradient-background);
   text-decoration: none;
