@@ -11,6 +11,29 @@ html {
 }
 
 body {
+    background-color: aqua;
    min-height: 100%; 
 }
+
+nav {
+    top: 0;
+    position: sticky;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 991px) {
+    
+}
+
 
