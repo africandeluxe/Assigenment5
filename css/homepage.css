@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 :root {
   --primary-text-color: #eee;
   --background-color: linear-gradient(0deg, rgb(6, 5, 21) 50%, rgb(86, 0, 167) 120%);
@@ -59,26 +60,17 @@ nav ul {
   list-style-type: none;
 }
 
-.hamburger-menu ul.submenu {
-  display: none;
-  flex-direction: column;
-  padding: var(--spacing-small);
-}
 main {
   min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
- 
-}
-.content {
-    align-self: center;
 }
 
-button .content {
-  display: flex;
-  justify-content: space-around;
+.content {
+  align-self: center;
 }
+
 button {
   background: none;
   margin: 0 10px 0 10px;
@@ -93,6 +85,7 @@ button a {
   color: var(--primary-text-color);
   padding: 1.2rem;
 }
+
 footer {
   background: var(--primary-gradient-background);
   text-decoration: none;
@@ -107,24 +100,27 @@ footer a {
   text-decoration: none;
 }
 
+#demo {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
 .slides-container {
-  visibility: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#demo {
-  width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-}
 #demo div {
   display: none;
+  text-align: center;
 }
+
 #demo div img {
-  width: 90%;
+  width: 80%;
   height: auto;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 991px) {
