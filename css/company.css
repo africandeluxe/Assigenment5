@@ -42,10 +42,17 @@
     flex-direction: column;
     padding: var(--spacing-small);
   }
-  .content {
-    min-height: 100%;
-    padding: 363px;
+  main {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   
   }
+  .content {
+      align-self: center;
+  }
+  
   
   .button.content {
     display: flex;

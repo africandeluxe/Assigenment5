@@ -42,12 +42,18 @@ nav ul {
   flex-direction: column;
   padding: var(--spacing-small);
 }
+main {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+ 
+}
 .content {
-  min-height: 70%;
-  padding: 170px;
+    align-self: center;
 }
 
-.button.content {
+button .content {
   display: flex;
   justify-content: space-around;
 }
