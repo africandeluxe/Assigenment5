@@ -49,6 +49,7 @@ header {
   color: var(--primary-text-color);
 }
 
+
 nav {
   top: 0;
   position: sticky;
@@ -65,7 +66,7 @@ nav ul {
   padding: var(--spacing-small);
 }
 main {
-  min-height: 70vh;
+  min-height: 81vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
