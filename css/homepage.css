@@ -11,9 +11,32 @@ html {
 }
 
 body {
-  min-height: 100%;
-  font-family: "K2D", sans-serif;
+    background-color: aqua;
+    min-height: 100%;
+    font-family: "K2D", sans-serif;
 }
+
+nav {
+    top: 0;
+    position: sticky;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 991px) {
+    
+}
+
 
 h1 {
   font-family: "K2D", sans-serif;
