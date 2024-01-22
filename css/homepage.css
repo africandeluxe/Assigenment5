@@ -1,80 +1,87 @@
-
-
 * {
   box-sizing: border-box;
 }
 :root {
-    --primary-text-color: #eee;
-    --background-color: linear-gradient(
-    0deg,
-        rgb(6, 5, 21) 50%,
-        rgb(86, 0, 167) 120%
-      );
-    
-    }
+  --primary-text-color: #eee;
+  --background-color: linear-gradient(0deg, rgb(6, 5, 21) 50%, rgb(86, 0, 167) 120%);
+}
+
+/* FONT PART */
+/* K2D Regular */
+@font-face {
+  font-family: "K2D-Regular";
+  src: url("./fonts/K2D-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "K2D-Bold";
+  src: url("./fonts/K2D-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "K2D-SemiBold";
+  src: url("./fonts/K2D-SemiBold.ttf") format("truetype");
+  font-weight: semibold;
+  font-style: normal;
+}
 
 html {
   height: 100vh;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-   background: var(--background-color) ;
-   margin: 0;
+  background: var(--background-color);
+  margin: 0;
 }
 
 header {
-    padding: 16px;
-    color: var(--primary-text-color) ;
+  padding: 16px;
+  color: var(--primary-text-color);
 }
 
 nav {
-    top: 0;
-    position: sticky;
+  top: 0;
+  position: sticky;
 }
 
 nav ul {
-    display: none;
-    list-style-type: none;
+  display: none;
+  list-style-type: none;
 }
 
 .hamburger-menu ul.submenu {
-    display: none;
-    flex-direction: column;
-    padding: var(--spacing-small)
+  display: none;
+  flex-direction: column;
+  padding: var(--spacing-small);
 }
 .content {
-    min-height: 70%;
-    padding: 60px
- }
- 
- 
- footer {
-     background: var(--primary-gradient-background);
-     text-decoration: none;
-     border-top: 1px solid #dee2e6;
-     color: var(--primary-text-color);
-     text-align: center;
-     padding: 24px;
-     max-height: 15%;
-   }
-   
-   footer a {
-     text-decoration: none;
-   }
- 
- 
-
-
-
-
-
-@media screen and (min-width: 991px) {
-    
+  min-height: 70%;
+  padding: 60px;
 }
 
+footer {
+  background: var(--primary-gradient-background);
+  text-decoration: none;
+  border-top: 1px solid #dee2e6;
+  color: var(--primary-text-color);
+  text-align: center;
+  padding: 24px;
+  max-height: 15%;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 991px) {
+}
 
 h1 {
   font-family: "K2D", sans-serif;
