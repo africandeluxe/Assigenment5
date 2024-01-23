@@ -1,13 +1,10 @@
 * {
   box-sizing: border-box;
 }
+
 :root {
   --primary-text-color: #eee;
-  --background-color: linear-gradient(
-    0deg,
-    rgb(6, 5, 21) 50%,
-    rgb(86, 0, 167) 120%
-  );
+  --background-color: linear-gradient(0deg, rgb(6, 5, 21) 50%, rgb(86, 0, 167) 120%);
 }
 
 html {
@@ -37,17 +34,13 @@ nav ul {
   list-style-type: none;
 }
 
-.hamburger-menu ul.submenu {
-  display: none;
-  flex-direction: column;
-  padding: var(--spacing-small);
-}
 main {
   min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
+
 .content {
   align-self: center;
 }
@@ -56,6 +49,7 @@ main {
   display: flex;
   justify-content: space-around;
 }
+
 button {
   background: none;
   margin: 0 10px 0 10px;
@@ -70,6 +64,7 @@ button a {
   color: var(--primary-text-color);
   padding: 1.2rem;
 }
+
 footer {
   background: var(--primary-gradient-background);
   text-decoration: none;
@@ -84,9 +79,55 @@ footer a {
   text-decoration: none;
 }
 
-@media screen and (min-width: 991px) {
+.dropbtn {
+  background-color: #3498db;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #2980b9;
 }
 
-h1 {
-  font-family: 'K2D', sans-serif;
+/* The container <div> - needed to position the dropdown content */
+.dropdown-filter {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.location-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.location-dropdown a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.location-dropdown a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+@media screen and (min-width: 991px) {
+  h1 {
+    font-family: "K2D", sans-serif;
+  }
 }
