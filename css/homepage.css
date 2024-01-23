@@ -143,7 +143,7 @@ footer a {
     display: none;
   }
 
-  nav ul {
+  nav>ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
