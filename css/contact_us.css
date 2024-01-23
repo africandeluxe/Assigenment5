@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    --primary-text-color: #eee;
+    --background-color: linear-gradient(0deg, rgb(6, 5, 21) 50%, rgb(86, 0, 167) 120%);
+    --primary-font-family: "K2D-Regular";
+    --secondary-font-family: "K2D-SemiBold";
+    --boldest-font-family: "K2D-Bold";
+  
+    --spacing-small: 8px;
+    --spacing-main: 16px;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* FONT PART */
+  /* K2D Regular */
+  @font-face {
+    font-family: "K2D-Regular";
+    src: url("./fonts/K2D-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "K2D-Bold";
+    src: url("./fonts/K2D-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "K2D-SemiBold";
+    src: url("./fonts/K2D-SemiBold.ttf") format("truetype");
+    font-weight: semibold;
+    font-style: normal;
+  }
+  
+  html {
+    height: 100vh;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--primary-font-family);
+    background: var(--background-color);
+    margin: 0;
+  }
+  
+  h1 {
+    font-family: --primary-font-family;
+    text-align: center;
+  }
+  
+  main {
+    min-height: 81vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .content {
+    align-self: center;
+  }
+  
+  button {
+    background: none;
+    margin: 0 10px 0 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: var(--primary-font-family);
+    font-size: 1.3rem;
+    border: 1px solid #fff;
+  }
+  
+  button a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    padding: 1.2rem;
+  }
+  
+  footer {
+    background: var(--primary-gradient-background);
+    text-decoration: none;
+    border-top: 1px solid #dee2e6;
+    color: var(--primary-text-color);
+    text-align: center;
+    padding: 24px;
+    max-height: 15%;
+  }
+  
+  footer a {
+    text-decoration: none;
+  }
