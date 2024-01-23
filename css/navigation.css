@@ -1,6 +1,7 @@
 :root {
     --primary-text-color: #eee;
     --background-color: linear-gradient(0deg, rgb(6, 5, 21) 50%, rgb(86, 0, 167) 120%);
+
     --primary-font-family: "K2D-Regular";
     --secondary-font-family: "K2D-SemiBold";
     --boldest-font-family: "K2D-Bold";
@@ -10,15 +11,11 @@
   }
 
 header {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr 0.7fr;
-    padding: var(--spacing-small);
     color: var(--primary-text-color);
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 0.5fr;
     margin:0;
-}
-  
-nav {
-    top: 0;
+    padding: var(--spacing-small);
 }
   
 nav ul {
@@ -30,8 +27,16 @@ nav ul {
 
 .submenu li {
     padding-left: var(--spacing-main);
-  }
-  
+}
+.hamburger-menu {
+    height: 50px;
+    width: 50px;
+}
+
+.logo-mobile {
+    height: 130px;
+    width: 130px;
+}
   
   @media screen and (min-width: 991px) {
     nav .hamburger-menu {
