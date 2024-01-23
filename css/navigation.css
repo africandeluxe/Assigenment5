@@ -20,6 +20,10 @@
     list-style-type: none;
     cursor: pointer;
   }
+
+  .submenu li {
+    padding-left: var(--spacing-main);
+  }
   
   
   @media screen and (min-width: 991px) {
