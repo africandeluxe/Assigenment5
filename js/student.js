@@ -6,7 +6,9 @@ $(() => {
     fulltime,
     about,
     experience,
-    portfolio
+    portfolio,
+    smallimg, 
+    bigimg
   ) {
     (this.name = name),
       (this.title = title),
@@ -14,7 +16,9 @@ $(() => {
       (this.fulltime = fulltime),
       (this.about = about),
       (this.experience = experience),
-      (this.portfolio = portfolio);
+      (this.portfolio = portfolio),
+      (this.smallimg = smallimg),
+      (this.bigimg = bigimg)
   }
 
   let Eddy = new Student(
