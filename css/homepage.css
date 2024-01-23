@@ -54,11 +54,6 @@ body {
   margin: 0;
 }
 
-header {
-  padding: 16px;
-  color: var(--primary-text-color);
-}
-
 h1 {
   font-family: --primary-font-family;
   text-align: center;
