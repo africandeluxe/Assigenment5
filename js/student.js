@@ -12,20 +12,21 @@ $(() => {
       (this.bigimg = bigimg);
   }
 
-  const locationDropdown = () => {
+  const setupDropdown = (buttonId, divId) => {
     $(document).ready(function () {
-      $("#locationDropdownBtn").on("click", function () {
-        $("#location").toggleClass("show");
+      $(buttonId).on("click", function () {
+        $(divId).toggleClass("show");
       });
 
       // Close the dropdown menu if the user clicks outside of it
       $(document).on("click", function (event) {
-        if (!$(event.target).closest(".dropdown-filter").length) {
-          $(".location-dropdown").removeClass("show");
+        if (!$(event.target).closest(buttonId).length) {
+          $(divId).removeClass("show");
         }
       });
     });
   };
 
-  locationDropdown();
+  setupDropdown("#locationDropdownBtn", "#location");
+  setupDropdown("#roleDropdownBtn", "#role");
 });
