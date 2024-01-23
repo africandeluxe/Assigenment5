@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(() => {
   //Hamburger menu 1st level/wokrks
   $("nav .hamburger-menu").on("click", (event) => $(event.target).next("ul").toggle());
@@ -25,4 +26,27 @@ $(() => {
       $(event.target).siblings().find(".submenu-3").hide("active");
     },
   });
-});
+
+
+    function Company (
+        name,
+        role,
+        location,
+        job_description,
+        responsibilities,
+        requirements,
+        bonus
+    ){
+        (this.name = name),
+        (this.role = role),
+        (this.location = location),
+        (this.job_description = job_description),
+        (this.responsibilities = responsibilities),
+        (this.requirements = requirements),
+        (this.bonus = bonus)
+    }
+
+    
+
+})
+>>>>>>> constractor-company-diyako
