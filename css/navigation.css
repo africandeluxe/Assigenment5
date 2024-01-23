@@ -8,6 +8,7 @@
   
     --spacing-small: 8px;
     --spacing-main: 16px;
+    --spacing-large: 36px;
   }
 
 header {
@@ -39,22 +40,35 @@ nav ul {
 }
   
   @media screen and (min-width: 991px) {
+    header {  
+        display: block;
+        margin-right: var(--spacing-large);
+        margin-left: var(--spacing-large);
+    }
+
     nav .hamburger-menu {
       display: none;
+    }
+
+    .logo-mobile {
+        display: none;
     }
   
     nav > ul {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
       list-style-type: none;
     }
   
     nav > ul > li {
-      border-bottom: 3px solid white;
+      
       cursor: pointer;
       padding: var(--spacing-small) var(--spacing-main);
-      text-align: center;
+      
+    }
+    .submenu li {
+        padding-left: none;
     }
   
 
