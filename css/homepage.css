@@ -10,6 +10,13 @@
   --primary-font-family: "K2D-Regular";
   --secondary-font-family: "K2D-SemiBold";
   --boldest-font-family: "K2D-Bold";
+
+  --spacing-small: 8px;
+  --spacing-main: 16px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /* FONT PART */
@@ -52,6 +59,11 @@ header {
   color: var(--primary-text-color);
 }
 
+h1 {
+  font-family: --primary-font-family;
+  text-align: center;
+}
+
 nav {
   top: 0;
   position: sticky;
@@ -60,6 +72,7 @@ nav {
 nav ul {
   display: none;
   list-style-type: none;
+  cursor: pointer;
 }
 
 main {
@@ -78,6 +91,7 @@ button {
   margin: 0 10px 0 10px;
   padding: 10px;
   border-radius: 10px;
+  font-family: var(--primary-font-family);
   font-size: 1.3rem;
   border: 1px solid #fff;
 }
@@ -271,8 +285,21 @@ body section.slideshow .detail .detail-item.active {
 }
 
 @media screen and (min-width: 991px) {
-  h1 {
-    font-family: --primary-font-family;
+  nav .hamburger-menu {
+    display: none;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+  }
+
+  nav > ul > li {
+    border-bottom: 3px solid white;
+    cursor: pointer;
+    padding: var(--spacing-small) var(--spacing-main);
     text-align: center;
   }
 
