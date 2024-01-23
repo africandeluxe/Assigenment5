@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="./../css/homepage.css" />
     <link rel="icon" href="./../img/favicon-48.png" type="image/x-icon" />
     <script src="./../js/jquery-3.7.1.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" defer></script>
+    <script src="https://unpkg.com/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/TextPlugin.min.js" defer></script>
     <script src="./../js/index.js" defer></script>
   </head>
   <body>
@@ -58,12 +61,55 @@
       </nav>
     </header>
     <main>
-      <section class="slides content">
-        <div class="slides-container" id="demo">
-          <div class="student-image"><img src="./../img/student1.jpg" alt="Student 1" /></div>
-          <div class="student-image"><img src="./../img/student2.jpg" alt="Student 2" /></div>
-          <div class="student-image"><img src="./../img/student3.jpg" alt="Student 3" /></div>
-          <div class="student-image"><img src="./../img/student4.jpg" alt="Student 4" /></div>
+      <section class="slideshow">
+        <!-- <a href="https://www.jqueryscript.net/tags.php?/Thumbnail/">Thumbnail</a> Rotator -->
+        <ul class="navigation">
+          <li class="navigation-item active">
+            <span class="rotate-holder"></span>
+            <span class="background-holder" style="background-image: url(./../img/student1.jpg)"></span>
+          </li>
+
+          <li class="navigation-item">
+            <span class="rotate-holder"></span>
+            <span class="background-holder" style="background-image: url(./../img/student2.jpg)"></span>
+          </li>
+
+          <li class="navigation-item">
+            <span class="rotate-holder"></span>
+            <span class="background-holder" style="background-image: url(./../img/student3.jpg)"></span>
+          </li>
+
+          <li class="navigation-item">
+            <span class="rotate-holder"></span>
+            <span class="background-holder" style="background-image: url(./../img/student4.jpg)"></span>
+          </li>
+
+          ...
+        </ul>
+        <!-- <a href="https://www.jqueryscript.net/slideshow/">Slideshow</a> -->
+        <div class="detail">
+          <div class="detail-item active">
+            <div class="headline">LIA FINDER</div>
+            <div class="background" style="background-image: url(./../img/student1.jpg); height: 100vh"></div>
+            <div class="background" style="background-image: url(./../img/student1.jpg); height: 100vh; background-size: cover; background-position: center"></div>
+          </div>
+
+          <div class="detail-item">
+            <div class="headline">LIA FINDER</div>
+            <div class="background" style="background-image: url(./../img/student2.jpg)"></div>
+          </div>
+
+          <div class="detail-item">
+            <div class="headline">LIA FINDER</div>
+            <div class="background" style="background-image: url(./../img/student3.jpg)"></div>
+          </div>
+
+          <div class="detail-item">
+            <div class="headline">LIA FINDER</div>
+            <div class="background" style="background-image: url(./../img/student4.jpg)"></div>
+          </div>
+
+          ...
         </div>
       </section>
       <section class="button content">
