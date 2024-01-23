@@ -8,23 +8,27 @@
     --spacing-small: 8px;
     --spacing-main: 16px;
   }
-   header {
+
+header {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-   }
+    grid-template-columns: 1fr 1.5fr 0.7fr;
+    padding: var(--spacing-small);
+    color: var(--primary-text-color);
+    margin:0;
+}
   
-  nav {
+nav {
     top: 0;
-    position: sticky;
-  }
+}
   
-  nav ul {
+nav ul {
     display: none;
     list-style-type: none;
     cursor: pointer;
-  }
+    top: 0;
+}
 
-  .submenu li {
+.submenu li {
     padding-left: var(--spacing-main);
   }
   
