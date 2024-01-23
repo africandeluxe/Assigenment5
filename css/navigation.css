@@ -8,7 +8,10 @@
     --spacing-small: 8px;
     --spacing-main: 16px;
   }
-  
+   header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+   }
   
   nav {
     top: 0;
