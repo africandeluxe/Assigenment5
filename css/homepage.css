@@ -1,14 +1,21 @@
-* {
-  box-sizing: border-box;
-}
-
 :root {
   --primary-text-color: #eee;
   --background-color: linear-gradient(0deg, rgb(6, 5, 21) 50%, rgb(86, 0, 167) 120%);
   --primary-font-family: "K2D-Regular";
   --secondary-font-family: "K2D-SemiBold";
   --boldest-font-family: "K2D-Bold";
+
+  --spacing-small: 8px;
+  --spacing-main: 16px;
 }
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
 
 /* FONT PART */
 /* K2D Regular */
@@ -63,6 +70,7 @@ nav {
 nav ul {
   display: none;
   list-style-type: none;
+  cursor: pointer;
 }
 
 main {
@@ -131,15 +139,23 @@ footer a {
 
 @media screen and (min-width: 991px) {
 
-  .hamburger-menu {
+  nav .hamburger-menu {
     display: none;
   }
+
   nav ul {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     list-style-type: none;
   }
 
+  nav ul li {
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    padding: var(--spacing-small) var(--spacing-main);
+    text-align: center;
+}
 
 
 
