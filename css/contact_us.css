@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "K2D-Regular";
+  src: url("./fonts/K2D-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "K2D-Bold";
+  src: url("./fonts/K2D-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "K2D-SemiBold";
+  src: url("./fonts/K2D-SemiBold.ttf") format("truetype");
+  font-weight: semibold;
+  font-style: normal;
+}
 :root {
   --primary-text-color: #eee;
   --background-color: linear-gradient(0deg, rgb(6, 5, 21) 50%, rgb(86, 0, 167) 120%);
@@ -8,21 +28,34 @@
   --spacing-small: 8px;
   --spacing-main: 16px;
 }
-.main-contact-us {
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100vh;
+}
+
+body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  font-family: var(--primary-font-family);
+  background: var(--background-color);
+  margin: 0;
+}
+.main-contact-us {
+  flex-grow: 1;
 }
 
 .field,
 textarea {
-    font-size: calc(1rem + 1vw);
+    font-size: calc(0.7rem + 0.8vw);
     margin: 16px 0;
     color: white;
 }
+
 legend {
   color:#fff;
-  font-size: calc(1rem + 1vw);
+  font-size: calc(0.8rem + 1vw);
 }
 
 fieldset {
@@ -32,10 +65,10 @@ fieldset {
 }
 
 .send-button {
-    background-color: linear-gradient(#f8a4d8, #6d64ff);
+    background-color: linear-gradient(#f8a4d8,#6d64ff);
     border: 3px solid black;
     border-radius: 10%;
-    font-size: calc(1rem + 1vw);
+    font-size: calc(0.8rem + 1vw);
     margin: 6px 12px;
     padding: 10px 20px;
     transition: all linear 0.4s;
@@ -48,7 +81,7 @@ button:hover {
 }
 
 textarea {
-    height: 50px;
+    height: 80px;
     width: auto;;
 }
 
@@ -62,4 +95,19 @@ input[type=text] {
     border-radius: 5%;
     font-size: calc(0.7rem + 1vw);
     padding: 8px;
+}
+
+footer {
+  background: var(--primary-gradient-background);
+  text-decoration: none;
+  border-top: 1px solid #dee2e6;
+  color: var(--primary-text-color);
+  text-align: center;
+  padding: 24px;
+  max-height: 15%;
+  min-height: 82px;
+}
+
+footer a {
+  text-decoration: none;
 }
