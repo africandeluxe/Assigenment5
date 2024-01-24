@@ -35,6 +35,17 @@ main {
   align-self: center;
 }
 
+.company-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.company-img {
+  width: 100px;
+  height: 100px;
+}
 .main-content {
   color: white;
 }

@@ -1,17 +1,16 @@
 $(() => {
-  function Company(name, role, location, description, fulltime, responsibilities, requirements, bonus, smallimg, bigimg) {
-    (this.name = name),
-      (this.role = role),
-      (this.location = location),
-      (this.fulltime = fulltime),
-      (this.description = description),
-      (this.responsibilities = responsibilities),
-      (this.requirements = requirements),
-      (this.bonus = bonus),
-      (this.smallimg = smallimg),
-      (this.bigimg = bigimg);
+  function Company(name, role, location, fulltime, description, responsibilities, requirements, bonus, smallimg, bigimg) {
+    this.name = name;
+    this.role = role;
+    this.location = location;
+    this.fulltime = fulltime ? "Yes" : "No";
+    this.description = description;
+    this.responsibilities = responsibilities;
+    this.requirements = requirements;
+    this.bonus = bonus;
+    this.smallimg = smallimg;
+    this.bigimg = bigimg;
   }
-
   let Company1 = new Company(
     "InnovateTech Solutions",
     "Senior Software Developer",
@@ -21,7 +20,7 @@ $(() => {
     "As a Senior Software Developer, you will lead the development of complex software solutions, mentor junior developers, and contribute to the overall success of our projects.",
     "Requirements:\n- Master's degree in Computer Science\n- Extensive experience in full-stack development\n- Leadership skills and ability to work in a collaborative environment",
     "Competitive salary, stock options, and professional development opportunities.",
-    "innovatetech_small.jpg",
+    "./../img/companies-logo/InnovateTech Solutions-logos.jpeg",
     "innovatetech_big.jpg"
   );
 
