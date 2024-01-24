@@ -159,7 +159,7 @@ $(() => {
   };
 
   showCompanyInfo(ourCompanies);
-
+  
   // FILTER BUTTONS PART
   // F I L T E R S -_______-; Q(0.0)Q
 
@@ -186,11 +186,12 @@ $(() => {
     
 
   $(".fulltime-true").on("click", () => {
+
     let attribute= $(".fulltime-true").attr("data-value");
     console.log(attribute);
-    
+
     const filteredCompanies= ourCompanies.filter((item)=> {
-      return item.fulltime===attribute;
+      return item.location==="Los Angeles";
     })
     //showCompanyInfo(ourCompanies);
     console.log(filteredCompanies)
