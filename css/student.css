@@ -45,6 +45,9 @@ main {
   align-self: center;
 }
 
+.main-content {
+  color: white;
+}
 .wrapper {
   display: flex;
   flex-direction: column;

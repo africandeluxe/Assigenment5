@@ -1,10 +1,10 @@
 $(() => {
-  function Company(name, role, location, job_description, fulltime, responsibilities, requirements, bonus, smallimg, bigimg) {
+  function Company(name, role, location, description, fulltime, responsibilities, requirements, bonus, smallimg, bigimg) {
     (this.name = name),
       (this.role = role),
       (this.location = location),
       (this.fulltime = fulltime),
-      (this.job_description = job_description),
+      (this.description = description),
       (this.responsibilities = responsibilities),
       (this.requirements = requirements),
       (this.bonus = bonus),
@@ -142,6 +142,25 @@ $(() => {
   );
 
   let ourCompanies = [Company1, Company2, Company3, Company4, Company5, Company6, Company7, Company8, Company9, Company10];
+
+  const showCompanyInfo = (companies) => {
+    companies.forEach((company) => {
+      $(".main-content").append(`
+      <div class="company-container">
+        <img class="company-img" src="${company.smallimg}" alt="${company.name}"> 
+        <h2 class="company-title"> ${company.name} </h2> 
+        <p class="company-role"> We are looking for a ${company.role} </p> 
+        <p class="company-fulltime"> Full-time: ${company.fulltime} </p> 
+        <p class="company-description"> ${company.description} </p> 
+      </div>
+    `);
+    });
+  };
+
+  showCompanyInfo(ourCompanies);
+
+  // FILTER BUTTONS PART
+  // F I L T E R S -_______-; Q(0.0)Q
 
   const setupDropdown = (buttonId, divId) => {
     $(document).ready(function () {
