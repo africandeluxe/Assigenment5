@@ -181,22 +181,4 @@ $(() => {
   setupDropdown("#locationDropdownBtn", "#location");
   setupDropdown("#roleDropdownBtn", "#role");
   setupDropdown("#fulltimeDropdownBtn", "#fulltime");
-
-
-    
-
-  $(".fulltime-true").on("click", () => {
-
-    let attribute= $(".fulltime-true").attr("data-value");
-    console.log(attribute);
-
-    const filteredCompanies= ourCompanies.filter((item)=> {
-      return item.location==="Los Angeles";
-    })
-    //showCompanyInfo(ourCompanies);
-    console.log(filteredCompanies)
-
-
-
-  })
 });

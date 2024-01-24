@@ -125,19 +125,53 @@ $(() => {
   ];
 
   const showStudentInfo = students => {
-    $('.student-content').empty();
+    const studentContent = $('.student-content').empty();
 
     students.forEach(student => {
-      $('.student-content').append(
-        `   
+      const profile = $(`
         <div class="profile">
-        <img class="student-img" src="./../img/student-profile-img/${student.name}.jpg" alt="">
-        <h4>${student.name} ${student.lastname}</h4>
-        <p>${student.title}</p>
+          <img class="student-img" src="./../img/student-profile-img/${student.name}.jpg" alt="">
+          <h4>${student.name} ${student.lastname}</h4>
+          <p>${student.title}</p>
+          <button class="read-more">View Profile</button>
         </div>
-        `
-      );
+      `);
+
+      profile.find('.read-more').on('click', () => {
+        const modalContent = $(`
+          <div class="modal" id="modal">
+            <div class="modal-header">
+            <img class="modal-img" src="./../img/student-profile-img/${student.name}.jpg" alt="">
+              <div class="title">${student.name} ${student.lastname} 
+             </div>
+              <button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+            <h3>${student.title}</h3>
+              <p>About: ${student.about}</p>
+              </br>
+              <p>Experince: ${student.experience}</p>
+              </br>
+              <p>${student.portfolio}</p>
+            </div>
+          </div>
+          <div class="active" id="overlay"></div>
+        `);
+
+        modalContent.find('.close-button, #overlay').on('click', () => {
+          modalContent.removeClass('active');
+          $('#overlay').removeClass('active');
+          showStudentInfo(arrayStudentObject);
+        });
+
+        studentContent.empty().append(modalContent);
+        modalContent.addClass('active');
+        $('#overlay').addClass('active');
+      });
+
+      studentContent.append(profile);
     });
   };
+
   showStudentInfo(arrayStudentObject);
 });
