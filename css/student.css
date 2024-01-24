@@ -24,16 +24,6 @@ header {
   border-bottom: 1px solid #fff;
 }
 
-nav {
-  top: 0;
-  position: sticky;
-}
-
-nav ul {
-  display: none;
-  list-style-type: none;
-}
-
 main {
   min-height: 70vh;
   display: flex;
