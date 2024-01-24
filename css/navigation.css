@@ -13,16 +13,17 @@
 
 header {
     color: var(--primary-text-color);
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1.2fr 0.5fr;
+    justify-content: space-between;
     margin:0;
     padding: var(--spacing-small);
 }
   
 nav ul {
+    cursor: pointer;
     display: none;
     list-style-type: none;
-    cursor: pointer;
     top: 0;
 }
 
@@ -35,8 +36,8 @@ nav ul {
 }
 
 .logo-mobile {
-    height: 130px;
-    width: 130px;
+    height: 55px;
+    width: 55px;
 }
   
   @media screen and (min-width: 991px) {
