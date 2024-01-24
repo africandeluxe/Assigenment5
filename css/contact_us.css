@@ -24,10 +24,11 @@
   --primary-font-family: "K2D-Regular";
   --secondary-font-family: "K2D-SemiBold";
   --boldest-font-family: "K2D-Bold";
-
   --spacing-small: 8px;
   --spacing-main: 16px;
+  --spacing-large: 24px;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -36,12 +37,13 @@ html {
 }
 
 body {
+  background: var(--background-color);
   display: flex;
   flex-direction: column;
   font-family: var(--primary-font-family);
-  background: var(--background-color);
   margin: 0;
 }
+
 .main-contact-us {
   flex-grow: 1;
 }
@@ -49,29 +51,29 @@ body {
 .field,
 textarea {
     font-size: calc(0.7rem + 0.8vw);
-    margin: 16px 0;
-    color: white;
+    margin: var(--spacing-small) 0;
+    color: var(--primary-text-color);
 }
 
 legend {
-  color:#fff;
+  color:var(--primary-text-color);
   font-size: calc(0.8rem + 1vw);
 }
 
 fieldset {
     border: 3px solid white;
     border-radius: 10%;
-    margin: 24px 16px;
+    margin: var(--spacing-large) var(--spacing-main);
 }
 
 .send-button {
     background-image: linear-gradient(#f8a4d8,#6d64ff);
-    border: 3px solid white;
+    border: 3px solid var(--primary-text-color);
     border-radius: 10%;
-    color: white;
+    color: var(--primary-text-color);
     font-size: calc(0.8rem + 1vw);
     margin: 6px 12px;
-    padding: 10px 20px;
+    padding: var(--spacing-main);
     transition: all linear 0.4s;
 }
 
@@ -95,18 +97,18 @@ input[type=text] {
     border: 2px solid black;
     border-radius: 5%;
     font-size: calc(0.7rem + 1vw);
-    padding: 8px;
+    padding: var(--spacing-small);
 }
 
 footer {
   background: var(--primary-gradient-background);
-  text-decoration: none;
   border-top: 1px solid #dee2e6;
   color: var(--primary-text-color);
-  text-align: center;
-  padding: 24px;
   max-height: 15%;
   min-height: 82px;
+  padding: var(--spacing-large);
+  text-align: center;
+  text-decoration: none;
 }
 
 footer a {
