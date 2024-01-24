@@ -106,7 +106,6 @@ p {
   top: 10%;
   left: 10%;
   transform: translate(-50%, -50%) scale(0);
-
   border-radius: 10px;
   z-index: 100;
   background: var(--primary-profile-background-color);
@@ -117,6 +116,8 @@ p {
   max-width: 80%;
   overflow: scroll;
 }
+
+
 
 .modal.active {
   transform: translate(0%, 0%) scale(1);
@@ -145,8 +146,9 @@ p {
   border: none;
   outline: none;
   background: none;
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-weight: bold;
+  transform: translate(20%, -95%);
 }
 
 .modal-body {
