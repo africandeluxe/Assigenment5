@@ -1,11 +1,15 @@
 .field,
 textarea {
-    font-size: calc(1.5rem+1vw);
+    font-size: calc(1rem + 1vw);
     margin: 16px 0;
+    color: white;
+}
+legend {
+  color:#fff;
 }
 
 fieldset {
-    border: 3px solid black;
+    border: 3px solid white;
     border-radius: 10%;
     margin: 0 15%;
 }
@@ -14,7 +18,7 @@ button {
     background-color: white;
     border: 3px solid black;
     border-radius: 10%;
-    font-size: calc(1.5rem+1vw);
+    font-size: calc(1rem + 1vw);
     margin: 6px 12px;
     padding: 10px 20px;
     transition: all linear 0.4s;
