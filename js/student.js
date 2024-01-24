@@ -159,4 +159,4 @@ $(() => {
   setupDropdown("#locationDropdownBtn", "#location");
   setupDropdown("#roleDropdownBtn", "#role");
   setupDropdown("#fulltimeDropdownBtn", "#fulltime");
-,});
+});
