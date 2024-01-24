@@ -57,7 +57,7 @@ $(() => {
     'During my internship, I was well-liked by my peers and co-workers, and I gained invaluable experiences working with people on different levels.'
   );
   let Adriano = new Student(
-    'Adriano ',
+    'Adriano',
     'Montana',
     'Back End Developer',
     'Rome',
@@ -66,7 +66,7 @@ $(() => {
     'My experience in working restaurant came in handy when learning Back-End, as it can be broken down to problem solving. That experience was appriciated when I was working as an intern, and I was well-liked in that enviorment.'
   );
   let Giacinta = new Student(
-    'Giacinta ',
+    'Giacinta',
     'Offredi',
     'App Developer',
     'Rome',
@@ -75,7 +75,7 @@ $(() => {
     'I am constantly curious in every nearly every aspect of new things we learn in programming, so I am good at asking questions and getting good info from my superiors that I can use to further improve. I can be trusted with plenty of responsibility '
   );
   let Romaine = new Student(
-    'Romaine ',
+    'Romaine',
     'Plourde',
     'App Developer',
     'Paris',
@@ -84,7 +84,7 @@ $(() => {
     'I have been described to work really well in supporting other people, and with communicating with clients.'
   );
   let Sigurd = new Student(
-    'Sigurd ',
+    'Sigurd',
     'Wikström',
     'App Developer',
     'Stockholm',
@@ -93,7 +93,7 @@ $(() => {
     'During this internship I was said to be really good at handling clients, and was trusted with the responsibility of being the presenter of the team I worked in.'
   );
   let Astrid = new Student(
-    'Astrid ',
+    'Astrid',
     'Bärk',
     'Full Stack Developer',
     'Stockholm',
@@ -102,7 +102,7 @@ $(() => {
     'I have a drive in becoming better and better in my chosen field, and have been described as a fast learner. My internship exposed me on what more there is to learn, and I am relishing the challenges this industry will provide me with.'
   );
   let Dimitri = new Student(
-    'Dimitri ',
+    'Dimitri',
     'Giroux',
     'App Developer',
     'Paris',
