@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "K2D-Regular";
+  src: url("./fonts/K2D-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "K2D-Bold";
+  src: url("./fonts/K2D-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "K2D-SemiBold";
+  src: url("./fonts/K2D-SemiBold.ttf") format("truetype");
+  font-weight: semibold;
+  font-style: normal;
+}
+:root {
+  --primary-text-color: #eee;
+  --background-color: linear-gradient(0deg, rgb(6, 5, 21) 50%, rgb(86, 0, 167) 120%);
+  --primary-font-family: "K2D-Regular";
+  --secondary-font-family: "K2D-SemiBold";
+  --boldest-font-family: "K2D-Bold";
+  --spacing-small: 8px;
+  --spacing-main: 16px;
+  --spacing-large: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100vh;
+}
+
+body {
+  background: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--primary-font-family);
+  margin: 0;
+}
+
+.main-contact-us {
+  flex-grow: 1;
+}
+
+.field,
+textarea {
+    font-size: calc(0.7rem + 0.8vw);
+    margin: var(--spacing-small) 0;
+    color: var(--primary-text-color);
+}
+
+legend {
+  color:var(--primary-text-color);
+  font-size: calc(0.8rem + 1vw);
+}
+
+fieldset {
+    border: 3px solid white;
+    border-radius: 10%;
+    margin: var(--spacing-large) var(--spacing-main);
+}
+
+.send-button {
+    background-image: linear-gradient(#f8a4d8,#6d64ff);
+    border: 3px solid var(--primary-text-color);
+    border-radius: 10%;
+    color: var(--primary-text-color);
+    font-size: calc(0.8rem + 1vw);
+    margin: 6px 12px;
+    padding: var(--spacing-main);
+    transition: all linear 0.4s;
+}
+
+button:hover {
+    background-image: linear-gradient(#6d64ff,#f8a4d8);
+    color: black;
+    cursor: pointer;
+}
+
+textarea {
+    height: 80px;
+    width: auto;;
+}
+
+.required::after {
+    color: red;
+    content: "*";
+}
+
+input[type=text] {
+    border: 2px solid black;
+    border-radius: 5%;
+    font-size: calc(0.7rem + 1vw);
+    padding: var(--spacing-small);
+}
+
+footer {
+  background: var(--primary-gradient-background);
+  border-top: 1px solid #dee2e6;
+  color: var(--primary-text-color);
+  max-height: 15%;
+  min-height: 82px;
+  padding: var(--spacing-large);
+  text-align: center;
+  text-decoration: none;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+  
+  fieldset {
+    border: 4px solid white;
+    margin: 24px 72px;
+  }
+
+  .send-button {
+    margin-left: 120px;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  fieldset {
+    border: 5px solid white;
+    margin: 24px 120px;
+  }
+}

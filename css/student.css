@@ -24,25 +24,41 @@ header {
   border-bottom: 1px solid #fff;
 }
 
-nav {
-  top: 0;
-  position: sticky;
-}
-
-nav ul {
-  display: none;
-  list-style-type: none;
-}
-
 main {
   min-height: 70vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  padding: 10px;
 }
 
 .content {
   align-self: center;
+}
+
+.company-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.company-img {
+  width: 100px;
+  height: 100px;
+}
+.main-content {
+  color: white;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sidebar-filters {
+  display: flex;
+  flex-direction: row;
 }
 
 .button.content {

@@ -1,17 +1,16 @@
 $(() => {
-  function Company(name, role, location, job_description, fulltime, responsibilities, requirements, bonus, smallimg, bigimg) {
-    (this.name = name),
-      (this.role = role),
-      (this.location = location),
-      (this.fulltime = fulltime),
-      (this.job_description = job_description),
-      (this.responsibilities = responsibilities),
-      (this.requirements = requirements),
-      (this.bonus = bonus),
-      (this.smallimg = smallimg),
-      (this.bigimg = bigimg);
+  function Company(name, role, location, fulltime, description, responsibilities, requirements, bonus, smallimg, bigimg) {
+    this.name = name;
+    this.role = role;
+    this.location = location;
+    this.fulltime = fulltime ? "Yes" : "No";
+    this.description = description;
+    this.responsibilities = responsibilities;
+    this.requirements = requirements;
+    this.bonus = bonus;
+    this.smallimg = smallimg;
+    this.bigimg = bigimg;
   }
-
   let Company1 = new Company(
     "InnovateTech Solutions",
     "Senior Software Developer",
@@ -21,7 +20,7 @@ $(() => {
     "As a Senior Software Developer, you will lead the development of complex software solutions, mentor junior developers, and contribute to the overall success of our projects.",
     "Requirements:\n- Master's degree in Computer Science\n- Extensive experience in full-stack development\n- Leadership skills and ability to work in a collaborative environment",
     "Competitive salary, stock options, and professional development opportunities.",
-    "innovatetech_small.jpg",
+    "./../img/companies-logo/InnovateTech Solutions-logos.jpeg",
     "innovatetech_big.jpg"
   );
 
@@ -34,7 +33,7 @@ $(() => {
     "As a UX/UI Designer, you will be responsible for crafting visually appealing and intuitive user interfaces. Collaborate with cross-functional teams to bring concepts to life.",
     "Requirements:\n- Bachelor's degree in Design or related field\n- Proficiency in design tools like Adobe Creative Suite\n- Strong portfolio showcasing design projects",
     "Competitive salary, health and wellness benefits, and a vibrant work environment.",
-    "digitaldynamics_small.jpg",
+    "./../img/companies-logo/Digital Dynamics-logos.jpeg",
     "digitaldynamics_big.jpg"
   );
   let Company3 = new Company(
@@ -46,7 +45,7 @@ $(() => {
     "As a Data Scientist, you will analyze complex datasets, develop predictive models, and contribute to the development of data-driven solutions.",
     "Requirements:\n- Master's degree in Data Science or related field\n- Proficiency in programming languages like Python or R\n- Strong analytical and problem-solving skills",
     "Competitive salary, flexible work arrangements, and opportunities for professional growth.",
-    "quantuminnovations_small.jpg",
+    "./../img/companies-logo/Quantum Innovations-logos.jpeg",
     "quantuminnovations_big.jpg"
   );
 
@@ -59,7 +58,7 @@ $(() => {
     "As an Environmental Engineer, you will design and implement solutions to address environmental challenges. Collaborate with experts in the field to create a greener future.",
     "Requirements:\n- Bachelor's degree in Environmental Engineering\n- Experience with environmental impact assessments\n- Passion for sustainability",
     "Competitive salary, eco-friendly workplace, and opportunities for community engagement.",
-    "greentech_small.jpg",
+    "./../img/companies-logo/GreenTech Solutions-logos.jpeg",
     "greentech_big.jpg"
   );
 
@@ -72,7 +71,7 @@ $(() => {
     "As a Cybersecurity Analyst, you will monitor security systems, analyze threats, and implement measures to ensure the confidentiality and integrity of information.",
     "Requirements:\n- Bachelor's degree in Cybersecurity or related field\n- Knowledge of security frameworks and protocols\n- Analytical mindset and attention to detail",
     "Competitive salary, ongoing training, and a collaborative cybersecurity environment.",
-    "cyberguard_small.jpg",
+    "./../img/companies-logo/CyberGuard Solutions-logos.jpeg",
     "cyberguard_big.jpg"
   );
 
@@ -85,7 +84,7 @@ $(() => {
     "As a Healthcare Software Engineer, you will design and implement software for healthcare systems, ensuring reliability and compliance with industry standards.",
     "Requirements:\n- Bachelor's degree in Computer Science or Healthcare Informatics\n- Experience in healthcare software development\n- Knowledge of HIPAA regulations",
     "Competitive salary, health and wellness benefits, and opportunities to contribute to meaningful projects.",
-    "healthhub_small.jpg",
+    "./../img/companies-logo/HealthHub Technologies-logos.jpeg",
     "healthhub_big.jpg"
   );
 
@@ -98,7 +97,7 @@ $(() => {
     "As a Supply Chain Analyst, you will analyze data, optimize transportation routes, and implement strategies to enhance the efficiency of supply chain operations.",
     "Requirements:\n- Bachelor's degree in Supply Chain Management or related field\n- Strong analytical and problem-solving skills\n- Knowledge of logistics and transportation systems",
     "Competitive salary, career advancement opportunities, and a collaborative logistics environment.",
-    "swiftlogistics_small.jpg",
+    "./../img/companies-logo/SwiftLogistics-logos.jpeg",
     "swiftlogistics_big.jpg"
   );
 
@@ -111,7 +110,7 @@ $(() => {
     "As an Aerospace Engineer, you will design and test aircraft and spacecraft components, ensuring they meet safety and performance standards.",
     "Requirements:\n- Bachelor's or Master's degree in Aerospace Engineering\n- Experience with CAD software and simulation tools\n- Passion for aerospace innovation",
     "Competitive salary, opportunities for professional development, and a dynamic aerospace engineering environment.",
-    "aeroinnovate_small.jpg",
+    "./../img/companies-logo/AeroInnovate-logos.jpeg",
     "aeroinnovate_big.jpg"
   );
 
@@ -124,7 +123,7 @@ $(() => {
     "As a Creative Director, you will oversee the creative process, collaborate with clients, and ensure the delivery of high-quality multimedia projects.",
     "Requirements:\n- Extensive experience in multimedia production\n- Strong leadership and communication skills\n- Creative portfolio showcasing successful projects",
     "Competitive compensation, flexible work hours, and a vibrant creative workspace.",
-    "mosaicmedia_small.jpg",
+    "./../img/companies-logo/Mosaic Media Productions-logos.jpeg",
     "mosaicmedia_big.jpg"
   );
 
@@ -137,11 +136,30 @@ $(() => {
     "As a Biomedical Research Scientist, you will conduct experiments, analyze data, and contribute to the development of novel pharmaceutical products.",
     "Requirements:\n- PhD in Biomedical Sciences or related field\n- Strong research background\n- Knowledge of laboratory techniques and procedures",
     "Competitive salary, comprehensive benefits, and opportunities for professional growth.",
-    "bluebios_small.jpg",
+    "./../img/companies-logo/BlueBios Pharmaceuticals-logos.jpeg",
     "bluebios_big.jpg"
   );
 
   let ourCompanies = [Company1, Company2, Company3, Company4, Company5, Company6, Company7, Company8, Company9, Company10];
+
+  const showCompanyInfo = (companies) => {
+    companies.forEach((company) => {
+      $(".main-content").append(`
+      <div class="company-container">
+        <img class="company-img" src="${company.smallimg}" alt="${company.name}"> 
+        <h2 class="company-title"> ${company.name} </h2> 
+        <p class="company-role"> We are looking for a ${company.role} </p> 
+        <p class="company-fulltime"> Full-time: ${company.fulltime} </p> 
+        <p class="company-description"> ${company.description} </p> 
+      </div>
+    `);
+    });
+  };
+
+  showCompanyInfo(ourCompanies);
+
+  // FILTER BUTTONS PART
+  // F I L T E R S -_______-; Q(0.0)Q
 
   const setupDropdown = (buttonId, divId) => {
     $(document).ready(function () {
@@ -161,4 +179,4 @@ $(() => {
   setupDropdown("#locationDropdownBtn", "#location");
   setupDropdown("#roleDropdownBtn", "#role");
   setupDropdown("#fulltimeDropdownBtn", "#fulltime");
-,});
+});
