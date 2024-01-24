@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lia-Finder</title>
+    <link rel="stylesheet" href="./../css/contact_us.css" />
+    <link rel="stylesheet" href="./../css/navigation.css">
+    <link rel="icon" href="./../img/favicon-48.png" type="image/x-icon" />
+    <script src="./../js/jquery-3.7.1.min.js" defer></script>
+    <script src="./../js/index.js" defer></script>
+    <script src="./../js/general.js" defer></script>
+  </head>
+  <body>
+    <header>
+      
+      <nav>
+        <img class="hamburger-menu" src="./../img/icons8-menu-24.png" alt="hamburger-menu" />
+        <ul>
+          <li>Contact us</li>
+          <li>Social</li>
+          <li>
+            Our Team
+            <ul class="submenu">
+              <li>
+                Location
+                <ul class="submenu-2">
+                  <li>
+                    Stockholm
+                    <ul class="submenu-3">
+                      <li>Diyako</li>
+                      <li>Robel</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Rome
+                    <ul class="submenu-3">
+                      <li>Davide</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Paris
+                    <ul class="submenu-3">
+                      <li>Edwin</li>
+                      <li>Miski</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Portals
+            <ul class="submenu">
+              <li>Students portal</li>
+              <li>Company portal</li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <img class="logo-mobile" src="./../img/LIA FINDER.png" alt="Lia finder logo">
+      <div class="placeholder-grid"></div>
+    </header>
+    
+      <section class="main-contact-us">
+        <form action="mailto: lia-finder@gmail.com" method="POST" enctype="text/plain">
+          <fieldset>
+              <legend>User´s info</legend>
+                  <div class="field">
+                      <label class="required" for="first-name">Contact name</label>
+                      <input id="first-name" type="text" name="first-name" placeholder="Enter your first name" minlength="4" required>
+                  </div>
+                  <div class="field">
+                      <label for="telephone">Telephone</label>
+                      <input id="telephone" type="text" name="telephone" placeholder="Enter your telephone" minlength="9"><!--insert regex???-->
+                  </div>
+              </fieldset>
+              <fieldset>
+                  <legend>Message</legend>
+                      <div class="field">
+                          <label for="message"></label>
+                          <textarea name="message" id="message" cols="30" rows="30" placeholder="Write here..." required></textarea>
+                      </div>
+              
+                      <div class="field">
+                          <label for="newsletter">Want to receive our newsletter?</label>
+                          <input type="checkbox" id="newsletter" value="answer-newsletter" checked>
+                      </div>
+          </fieldset>
+              <button class="send-button">Send message</button>
+      </form>
+
+      </section>
+    
+    <footer>
+      <div class="social-medial-icons">
+        <a href="www.instagram.com" target="_blank">
+          <img src="./../img/icons8-instagram-30.png" alt="Instagram" />
+        </a>
+        <a href="www.youtube.com" target="_blank">
+          <img src="./../img/icons8-youtube-30.png" alt="Youtube" />
+        </a>
+        <a href="www.facebook.com" target="_blank">
+          <img src="./../img/icons8-facebook-30.png" alt="Facebook" />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
