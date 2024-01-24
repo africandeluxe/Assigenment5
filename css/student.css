@@ -38,11 +38,23 @@ main {
   min-height: 70vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  padding: 10px;
 }
 
 .content {
   align-self: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sidebar-filters {
+  display: flex;
+  flex-direction: row;
 }
 
 .button.content {
