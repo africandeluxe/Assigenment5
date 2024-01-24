@@ -12,6 +12,135 @@ $(() => {
       (this.bigimg = bigimg);
   }
 
+  let Company1 = new Company(
+    "InnovateTech Solutions",
+    "Senior Software Developer",
+    "New York",
+    true,
+    "InnovateTech Solutions is a dynamic tech company pushing the boundaries of innovation. Join our team to work on cutting-edge projects and make a lasting impact in the world of technology.",
+    "As a Senior Software Developer, you will lead the development of complex software solutions, mentor junior developers, and contribute to the overall success of our projects.",
+    "Requirements:\n- Master's degree in Computer Science\n- Extensive experience in full-stack development\n- Leadership skills and ability to work in a collaborative environment",
+    "Competitive salary, stock options, and professional development opportunities.",
+    "innovatetech_small.jpg",
+    "innovatetech_big.jpg"
+  );
+
+  let Company2 = new Company(
+    "Digital Dynamics",
+    "UX/UI Designer",
+    "Los Angeles",
+    false,
+    "Digital Dynamics is a creative design studio passionate about user experience and visual aesthetics. Join us to create stunning and user-friendly designs that captivate audiences around the globe.",
+    "As a UX/UI Designer, you will be responsible for crafting visually appealing and intuitive user interfaces. Collaborate with cross-functional teams to bring concepts to life.",
+    "Requirements:\n- Bachelor's degree in Design or related field\n- Proficiency in design tools like Adobe Creative Suite\n- Strong portfolio showcasing design projects",
+    "Competitive salary, health and wellness benefits, and a vibrant work environment.",
+    "digitaldynamics_small.jpg",
+    "digitaldynamics_big.jpg"
+  );
+  let Company3 = new Company(
+    "Quantum Innovations",
+    "Data Scientist",
+    "Chicago",
+    true,
+    "Quantum Innovations is at the forefront of data science, leveraging cutting-edge technologies to extract valuable insights. Join our team to work on challenging projects that drive innovation and impact.",
+    "As a Data Scientist, you will analyze complex datasets, develop predictive models, and contribute to the development of data-driven solutions.",
+    "Requirements:\n- Master's degree in Data Science or related field\n- Proficiency in programming languages like Python or R\n- Strong analytical and problem-solving skills",
+    "Competitive salary, flexible work arrangements, and opportunities for professional growth.",
+    "quantuminnovations_small.jpg",
+    "quantuminnovations_big.jpg"
+  );
+
+  let Company4 = new Company(
+    "GreenTech Solutions",
+    "Environmental Engineer",
+    "Seattle",
+    true,
+    "GreenTech Solutions is committed to sustainable practices and environmental conservation. Join our team to contribute to eco-friendly projects that make a positive impact on the planet.",
+    "As an Environmental Engineer, you will design and implement solutions to address environmental challenges. Collaborate with experts in the field to create a greener future.",
+    "Requirements:\n- Bachelor's degree in Environmental Engineering\n- Experience with environmental impact assessments\n- Passion for sustainability",
+    "Competitive salary, eco-friendly workplace, and opportunities for community engagement.",
+    "greentech_small.jpg",
+    "greentech_big.jpg"
+  );
+
+  let Company5 = new Company(
+    "CyberGuard Solutions",
+    "Cybersecurity Analyst",
+    "Washington, D.C.",
+    true,
+    "CyberGuard Solutions is dedicated to safeguarding digital assets and protecting against cyber threats. Join our team to be on the frontline of cybersecurity and make a difference in the digital landscape.",
+    "As a Cybersecurity Analyst, you will monitor security systems, analyze threats, and implement measures to ensure the confidentiality and integrity of information.",
+    "Requirements:\n- Bachelor's degree in Cybersecurity or related field\n- Knowledge of security frameworks and protocols\n- Analytical mindset and attention to detail",
+    "Competitive salary, ongoing training, and a collaborative cybersecurity environment.",
+    "cyberguard_small.jpg",
+    "cyberguard_big.jpg"
+  );
+
+  let Company6 = new Company(
+    "HealthHub Technologies",
+    "Healthcare Software Engineer",
+    "Boston",
+    true,
+    "HealthHub Technologies is revolutionizing healthcare through innovative software solutions. Join our team to develop applications that enhance patient care and streamline medical processes.",
+    "As a Healthcare Software Engineer, you will design and implement software for healthcare systems, ensuring reliability and compliance with industry standards.",
+    "Requirements:\n- Bachelor's degree in Computer Science or Healthcare Informatics\n- Experience in healthcare software development\n- Knowledge of HIPAA regulations",
+    "Competitive salary, health and wellness benefits, and opportunities to contribute to meaningful projects.",
+    "healthhub_small.jpg",
+    "healthhub_big.jpg"
+  );
+
+  let Company7 = new Company(
+    "SwiftLogistics",
+    "Supply Chain Analyst",
+    "Dallas",
+    true,
+    "SwiftLogistics is a leader in supply chain management, providing efficient solutions to clients worldwide. Join our team to optimize logistics and contribute to the success of global businesses.",
+    "As a Supply Chain Analyst, you will analyze data, optimize transportation routes, and implement strategies to enhance the efficiency of supply chain operations.",
+    "Requirements:\n- Bachelor's degree in Supply Chain Management or related field\n- Strong analytical and problem-solving skills\n- Knowledge of logistics and transportation systems",
+    "Competitive salary, career advancement opportunities, and a collaborative logistics environment.",
+    "swiftlogistics_small.jpg",
+    "swiftlogistics_big.jpg"
+  );
+
+  let Company8 = new Company(
+    "AeroInnovate",
+    "Aerospace Engineer",
+    "Houston",
+    true,
+    "AeroInnovate is a pioneer in aerospace engineering, pushing the boundaries of flight and space exploration. Join our team to work on groundbreaking projects and shape the future of aerospace technology.",
+    "As an Aerospace Engineer, you will design and test aircraft and spacecraft components, ensuring they meet safety and performance standards.",
+    "Requirements:\n- Bachelor's or Master's degree in Aerospace Engineering\n- Experience with CAD software and simulation tools\n- Passion for aerospace innovation",
+    "Competitive salary, opportunities for professional development, and a dynamic aerospace engineering environment.",
+    "aeroinnovate_small.jpg",
+    "aeroinnovate_big.jpg"
+  );
+
+  let Company9 = new Company(
+    "Mosaic Media Productions",
+    "Creative Director",
+    "Los Angeles",
+    false,
+    "Mosaic Media Productions is a creative agency specializing in multimedia content creation. Join our team to lead and inspire a talented group of creatives in producing captivating visual experiences.",
+    "As a Creative Director, you will oversee the creative process, collaborate with clients, and ensure the delivery of high-quality multimedia projects.",
+    "Requirements:\n- Extensive experience in multimedia production\n- Strong leadership and communication skills\n- Creative portfolio showcasing successful projects",
+    "Competitive compensation, flexible work hours, and a vibrant creative workspace.",
+    "mosaicmedia_small.jpg",
+    "mosaicmedia_big.jpg"
+  );
+
+  let Company10 = new Company(
+    "BlueBios Pharmaceuticals",
+    "Biomedical Research Scientist",
+    "San Diego",
+    true,
+    "BlueBios Pharmaceuticals is dedicated to advancing biomedical research and developing innovative solutions for healthcare. Join our team to contribute to groundbreaking discoveries in the field of life sciences.",
+    "As a Biomedical Research Scientist, you will conduct experiments, analyze data, and contribute to the development of novel pharmaceutical products.",
+    "Requirements:\n- PhD in Biomedical Sciences or related field\n- Strong research background\n- Knowledge of laboratory techniques and procedures",
+    "Competitive salary, comprehensive benefits, and opportunities for professional growth.",
+    "bluebios_small.jpg",
+    "bluebios_big.jpg"
+  );
+
   const setupDropdown = (buttonId, divId) => {
     $(document).ready(function () {
       $(buttonId).on("click", function () {
@@ -29,84 +158,5 @@ $(() => {
 
   setupDropdown("#locationDropdownBtn", "#location");
   setupDropdown("#roleDropdownBtn", "#role");
-  let Eddy = new Student(
-    'Eddy Markberg',
-    'App Developer',
-    'Stockholm',
-    false,
-    "My interest for web design started in 2010 after I specialised in graphic design at high school. I created a few amateur websites to experiment and broaden my knowledge in web design. After working in fast food, and travelling through Europe and Asia, I decided to pursue my interest by studying Interaction Design at university.After completing my bachelor's degree and working as a UI/UX designer, I began to show a keen eye for coding, therefore decided to combine my two favourite interests, design and programming.",
-    'During this internship I was given more responsibility in projects which involved direct communication with clients, working together in a team with people in different roles and coding challenging designs.'
-  );
-  let Hicke = new Student(
-    'Hicke Bärk',
-    'Front End Developer',
-    'Stockholm',
-    true,
-    "I've always liked web design in some form since childhood, but I didn't start pursuing an education of it until 2011 when I chose a graphic design course in high school. I coded a few rudimentory websites to get some experience in web design. After working in service, I decided to pursue Web Design and started studying Interaction Design at university. After finishing my studies with a bachelor's degree and working as a UI/UX designer, I started to get more and more used to coding and its many challenges, and thus felt that this truly can be the career I was meant for.",
-    'During this internship I was given more responsibility in projects which involved direct communication with clients, working together in a team with people in different roles and coding challenging designs'
-  );
-  let Domnick = new Student(
-    'Domnick Brûlée',
-    'Front End Developer',
-    'Paris',
-    true,
-    "Growing up in a household with multiple programmers, I have had an interest in it instilled at a young age. I have been programming as a hobby since high school and made wesites for fun for my friends, with increasingly complexity as time went on. After gratuating, I have been working service jobs before I eventually started studying to become a professional Front-End Developer. I have a mix of good traits learned from both being self taught as well as taught formally.",
-    'I know how to work efficiently in solitude and know how to be responsible and outgoing when working with a team.'
-  );
-  let Santuzza = new Student(
-    'Santuzza Marcello',
-    'Front End Developer',
-    'Rome',
-    true,
-    "My interest in programming started just after graduating high school, and I quickly started moving towards learning as much as I could on the subject. After some months of self learning while working part time, I applied for a school in Rome and I made strong strides in learning about HTML, CSS as well as Javacript.",
-    'During my internship, I was well-liked by my peers and co-workers, and I gained invaluable experiences working with people on different levels.'
-  );
-  let Adriano = new Student(
-    'Adriano Montana',
-    'Back End Developer',
-    'Rome',
-    false,
-    "After a decade in the restaurant business, I decided to make the switch to programming industry. I began coding in my free time before eventually enrolling in a course in Back-End.",
-    'My experience in working restaurant came in handy when learning Back-End, as it can be broken down to problem solving. That experience was appriciated when I was working as an intern, and I was well-liked in that enviorment.'
-  );
-  let Giacinta = new Student(
-    'Giacinta Offredi',
-    'App Developer',
-    'Rome',
-    true,
-    "I never really had an interest in programming, but it came easy and smoothly to me. So I simply kept at it until my skills flourished. I don't hate it, so I could focus on maximizing my efficiency as much as I could. What I do love is learning, and programming has so much to give and learn, so that part keeps me satisifed.",
-    'I am constantly curious in every nearly every aspect of new things we learn in programming, so I am good at asking questions and getting good info from my superiors that I can use to further improve. I can be trusted with plenty of responsibility '
-  );
-  let Romaine = new Student(
-    'Romaine Plourde',
-    'App Developer',
-    'Paris',
-    true,
-    "I gained an interest in programming during my high school years, and after graduating, it had become something I wanted to pursue in. I had to put that on hold for about 5 years to take care of my sickly mother, so I studied by myself on the side. After her passing, I wanted to focus on refining everything I know, and enrolled into a course.",
-    'I have been described to work really well in supporting other people, and with communicating with clients.'
-  );
-  let Sigurd = new Student(
-    'Sigurd Wikström',
-    'App Developer',
-    'Stockholm',
-    false,
-    "I have always had an fachination with programming, and after spending a lot of years working in marketing, I thought of making the switch to programming. My time studying it have proven to be very fruitful, as I feel I have an understanding of it.",
-    'During this internship I was said to be really good at handling clients, and was trusted with the responsibility of being the presenter of the team I worked in.'
-  );
-  let Astrid = new Student(
-    'Astrid Bärk',
-    'Full Stack Developer',
-    'Stockholm',
-    true,
-    "I started focus in on programming when I started in high school, and enrolled in a course soon after graduating. It was difficult at first, but the more I worked on it, the more everything made sense, and programming just clicked with me. I have been studying fulltime and want to work fuiltime solving the problems programming gives me. ",
-    'I have a drive in becoming better and better in my chosen field, and have been described as a fast learner. My internship exposed me on what more there is to learn, and I am relishing the challenges this industry will provide me with.'
-  );
-  let Dimitri  = new Student(
-    'Dimitri Giroux',
-    'App Developer',
-    'Paris',
-    true,
-    "General work around computers is something I've always been exposed to growing up. My mother worked in repairing computers, which taught me a lot on how they work. My father was a programmer, and taught me a lot about how coding works. Over the course of my childhood, web design is what I enjoyed the most, and thus was the part I spent the most time in learning by myself. By the time I was in in serious education to turn it into a career, I was far ahead of everyone else and made sure to help anyone out teacher did not have time to help.",
-    'This taught me how to work as a team and pull every one up to reach my level. This translated well when working at my internship, where I was focused to service and learn from my team and was pulled up to their level'
-  );
+  setupDropdown("#fulltimeDropdownBtn", "#fulltime");
 });

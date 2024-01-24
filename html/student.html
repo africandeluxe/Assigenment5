@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lia-Finder</title>
     <link rel="stylesheet" href="./../css/student.css" />
-    <link rel="stylesheet" href="./../css/navigation.css">
+    <link rel="stylesheet" href="./../css/navigation.css" />
     <script src="./../js/jquery-3.7.1.min.js"></script>
     <script src="./../js/general.js" defer></script>
     <script src="./../js/student.js" defer></script>
@@ -62,9 +62,16 @@
       </nav>
     </header>
     <main>
+      <div class="fulltime-filter">
+        <button id="fulltimeDropdownBtn" class="fulltimebtn">Full-Time</button>
+        <div id="fulltime" class="filters-dropdown">
+          <a href="#">Yes</a>
+          <a href="#">No</a>
+        </div>
+      </div>
       <div class="role-filter">
         <button id="roleDropdownBtn" class="rolebtn">Role</button>
-        <div id="role" class="location-dropdown">
+        <div id="role" class="filters-dropdown">
           <a href="#">Frontend Dev</a>
           <a href="#">Backend Dev</a>
           <a href="#">DevObs</a>
@@ -72,7 +79,7 @@
       </div>
       <div class="location-filter">
         <button id="locationDropdownBtn" class="locationbtn">Location</button>
-        <div id="location" class="location-dropdown">
+        <div id="location" class="filters-dropdown">
           <a href="#">Stockholm</a>
           <a href="#">Malmö</a>
           <a href="#">Paris</a>
