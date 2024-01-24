@@ -42,9 +42,26 @@ main {
   align-items: center;
   padding: 10px;
 }
+
+.company-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3498db;
+  border-radius: 20px;
+  margin: 5px 0;
+  padding: 2px;
+  width: 70%;
+}
+
 .company-img {
   width: 100px;
   height: 100px;
+  padding: 10px;
+}
+.company-description {
+  text-align: center;
 }
 .main-content {
   color: white;
