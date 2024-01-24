@@ -141,6 +141,8 @@ $(() => {
     "bluebios_big.jpg"
   );
 
+  let ourCompanies = [Company1, Company2, Company3, Company4, Company5, Company6, Company7, Company8, Company9, Company10];
+
   const setupDropdown = (buttonId, divId) => {
     $(document).ready(function () {
       $(buttonId).on("click", function () {
