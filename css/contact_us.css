@@ -1,3 +1,19 @@
+:root {
+  --primary-text-color: #eee;
+  --background-color: linear-gradient(0deg, rgb(6, 5, 21) 50%, rgb(86, 0, 167) 120%);
+  --primary-font-family: "K2D-Regular";
+  --secondary-font-family: "K2D-SemiBold";
+  --boldest-font-family: "K2D-Bold";
+
+  --spacing-small: 8px;
+  --spacing-main: 16px;
+}
+.main-contact-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .field,
 textarea {
     font-size: calc(1rem + 1vw);
@@ -6,16 +22,17 @@ textarea {
 }
 legend {
   color:#fff;
+  font-size: calc(1rem + 1vw);
 }
 
 fieldset {
     border: 3px solid white;
     border-radius: 10%;
-    margin: 0 15%;
+    margin: 24px 16px;
 }
 
-button {
-    background-color: white;
+.send-button {
+    background-color: linear-gradient(#f8a4d8, #6d64ff);
     border: 3px solid black;
     border-radius: 10%;
     font-size: calc(1rem + 1vw);
@@ -25,7 +42,7 @@ button {
 }
 
 button:hover {
-    background-image: linear-gradient(#f8a4d8, #6d64ff);
+    background-image: linear-gradient(#6d64ff,#f8a4d8);
     color: #fff;
     cursor: pointer;
 }
@@ -43,6 +60,6 @@ textarea {
 input[type=text] {
     border: 2px solid black;
     border-radius: 5%;
-    font-size: calc(1.5rem+1vw);
+    font-size: calc(0.7rem + 1vw);
     padding: 8px;
 }
