@@ -191,7 +191,7 @@ $(() => {
     console.log(attribute);
 
     const filteredCompanies= ourCompanies.filter((item)=> {
-      return item.location==="Los Angeles";
+      return item.location===attribute;
     })
     //showCompanyInfo(ourCompanies);
     console.log(filteredCompanies)
