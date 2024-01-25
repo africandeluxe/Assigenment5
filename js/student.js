@@ -27,7 +27,7 @@ $(() => {
   let Company2 = new Company(
     "Digital Dynamics",
     "App Developer",
-    "Rome",
+    "New York",
     false,
     "Digital Dynamics is a creative design studio passionate about user experience and visual aesthetics. Join us to create stunning and user-friendly designs that captivate audiences around the globe.",
     "As a UX/UI Designer, you will be responsible for crafting visually appealing and intuitive user interfaces. Collaborate with cross-functional teams to bring concepts to life.",
@@ -143,7 +143,7 @@ $(() => {
   let ourCompanies = [Company1, Company2, Company3, Company4, Company5, Company6, Company7, Company8, Company9, Company10];
 
   const showCompanyInfo = (companies) => {
-    $(".main-content").empty();
+    
     companies.forEach((company) => {
       $(".main-content").append(`
       <div class="company-container">
@@ -164,7 +164,7 @@ $(() => {
 
   // F I L T E R S -_______-; Q(0.0)Q
 
-  //FULLTIME FILTER
+  /*FULLTIME FILTER
   let fulltimeYes = ourCompanies.filter((company) => {
     return company.fulltime === "Yes";
   });
@@ -189,8 +189,8 @@ $(() => {
 
   fulltimeYesClick();
   fulltimeNoClick();
-
-  //ROLE FILTERS
+*/
+  /*ROLE FILTERS
   let seniorSoftware = ourCompanies.filter((company) => {
     return company.role === "Senior Software Developer";
   });
@@ -239,12 +239,13 @@ $(() => {
   frontendDeveloperClick();
   uxDesignClick();
   dataScientistClick();
+  */
 
-  // LOCATION FILTERS
+  /* LOCATION FILTERS
   let cityStockholm = ourCompanies.filter((company) => {
     return company.location === "Stockholm";
   });
-
+/
   const cityStockholmClick = () => {
     $(".stockholm").on("click", () => {
       $(".main-content").empty();
@@ -288,33 +289,56 @@ $(() => {
   let cityLosAngeles = ourCompanies.filter((company) => {
     return company.location === "Los Angeles";
   });
-
   const cityLosAngelesClick = () => {
     $(".los-angeles").on("click", () => {
       $(".main-content").empty();
       showCompanyInfo(cityLosAngeles);
     });
-  };
+  };*/
+   //cityStockholmClick();
+  //cityRomeClick();
+  //cityParisClick();
+  //cityNewYorkClick();
+  //cityLosAngelesClick();
+//Davide main function
+let isFilterReset=false;
 
-  cityStockholmClick();
-  cityRomeClick();
-  cityParisClick();
-  cityNewYorkClick();
-  cityLosAngelesClick();
-
+const filterMainFunction = (className, filterCategory, filterSpecificValue) => {  
+  let filteredAnnouncements = ourCompanies.filter((company)=> {
+    return company[filterCategory]=== filterSpecificValue;
+  })
+  $(className).on("click", () => {
+    $(".main-content").empty();
+    showCompanyInfo(filteredAnnouncements);
+  })
+}
+  //fulltime
+  filterMainFunction(".fulltime-true", "fulltime", "Yes");
+  filterMainFunction(".fulltime-false", "fulltime", "No");
+  //Roles
+  filterMainFunction(".senior-software", "role", "Senior Software Developer");
+  filterMainFunction(".frontend-developer", "role", "Frontend Developer");
+  filterMainFunction(".ux-design", "role", "UX/UI Designer");
+  filterMainFunction(".data-scientist", "role", "Data Scientist");
+  //Location
+  filterMainFunction(".stockholm", "location", "Stockholm");
+  filterMainFunction(".rome", "location", "Rome");
+  filterMainFunction(".paris", "location", "Paris");
+  filterMainFunction(".los-angeles", "location", "Los Angeles");
+  filterMainFunction(".new-york", "location", "New York");
+  
   // RESET FILTERS
-
   const resetFilters = () => {
     $(".resetbtn").on("click", () => {
       $(".main-content").empty();
+      isFilterReset=true;
       showCompanyInfo(ourCompanies);
     });
   };
-
+  
   resetFilters();
 
   // B U T T O N S
-
   const setupDropdown = (buttonId, divId) => {
     $(document).ready(function () {
       $(buttonId).on("click", function () {
