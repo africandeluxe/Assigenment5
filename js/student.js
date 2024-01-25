@@ -13,8 +13,8 @@ $(() => {
   }
   let Company1 = new Company(
     "InnovateTech Solutions",
-    "Senior Software Developer",
-    "New York",
+    "Front End Developer",
+    "Stockholm",
     true,
     "InnovateTech Solutions is a dynamic tech company pushing the boundaries of innovation. Join our team to work on cutting-edge projects and make a lasting impact in the world of technology.",
     "As a Senior Software Developer, you will lead the development of complex software solutions, mentor junior developers, and contribute to the overall success of our projects.",
@@ -26,8 +26,8 @@ $(() => {
 
   let Company2 = new Company(
     "Digital Dynamics",
-    "UX/UI Designer",
-    "Los Angeles",
+    "App Developer",
+    "Rome",
     false,
     "Digital Dynamics is a creative design studio passionate about user experience and visual aesthetics. Join us to create stunning and user-friendly designs that captivate audiences around the globe.",
     "As a UX/UI Designer, you will be responsible for crafting visually appealing and intuitive user interfaces. Collaborate with cross-functional teams to bring concepts to life.",
@@ -38,8 +38,8 @@ $(() => {
   );
   let Company3 = new Company(
     "Quantum Innovations",
-    "Data Scientist",
-    "Chicago",
+    "Back End Developer",
+    "Paris",
     true,
     "Quantum Innovations is at the forefront of data science, leveraging cutting-edge technologies to extract valuable insights. Join our team to work on challenging projects that drive innovation and impact.",
     "As a Data Scientist, you will analyze complex datasets, develop predictive models, and contribute to the development of data-driven solutions.",
@@ -51,9 +51,9 @@ $(() => {
 
   let Company4 = new Company(
     "GreenTech Solutions",
-    "Environmental Engineer",
-    "Seattle",
-    true,
+    "Front End Developer",
+    "Rome",
+    false,
     "GreenTech Solutions is committed to sustainable practices and environmental conservation. Join our team to contribute to eco-friendly projects that make a positive impact on the planet.",
     "As an Environmental Engineer, you will design and implement solutions to address environmental challenges. Collaborate with experts in the field to create a greener future.",
     "Requirements:\n- Bachelor's degree in Environmental Engineering\n- Experience with environmental impact assessments\n- Passion for sustainability",
@@ -64,8 +64,8 @@ $(() => {
 
   let Company5 = new Company(
     "CyberGuard Solutions",
-    "Cybersecurity Analyst",
-    "Washington, D.C.",
+    "Back End Developer",
+    "Stockholm",
     true,
     "CyberGuard Solutions is dedicated to safeguarding digital assets and protecting against cyber threats. Join our team to be on the frontline of cybersecurity and make a difference in the digital landscape.",
     "As a Cybersecurity Analyst, you will monitor security systems, analyze threats, and implement measures to ensure the confidentiality and integrity of information.",
@@ -77,8 +77,8 @@ $(() => {
 
   let Company6 = new Company(
     "HealthHub Technologies",
-    "Healthcare Software Engineer",
-    "Boston",
+    "App Developer",
+    "Paris",
     true,
     "HealthHub Technologies is revolutionizing healthcare through innovative software solutions. Join our team to develop applications that enhance patient care and streamline medical processes.",
     "As a Healthcare Software Engineer, you will design and implement software for healthcare systems, ensuring reliability and compliance with industry standards.",
@@ -90,8 +90,8 @@ $(() => {
 
   let Company7 = new Company(
     "SwiftLogistics",
-    "Supply Chain Analyst",
-    "Dallas",
+    "App Developer",
+    "Stockholm",
     true,
     "SwiftLogistics is a leader in supply chain management, providing efficient solutions to clients worldwide. Join our team to optimize logistics and contribute to the success of global businesses.",
     "As a Supply Chain Analyst, you will analyze data, optimize transportation routes, and implement strategies to enhance the efficiency of supply chain operations.",
@@ -103,9 +103,9 @@ $(() => {
 
   let Company8 = new Company(
     "AeroInnovate",
-    "Aerospace Engineer",
-    "Houston",
-    true,
+    "Front End Developer",
+    "Paris",
+    false,
     "AeroInnovate is a pioneer in aerospace engineering, pushing the boundaries of flight and space exploration. Join our team to work on groundbreaking projects and shape the future of aerospace technology.",
     "As an Aerospace Engineer, you will design and test aircraft and spacecraft components, ensuring they meet safety and performance standards.",
     "Requirements:\n- Bachelor's or Master's degree in Aerospace Engineering\n- Experience with CAD software and simulation tools\n- Passion for aerospace innovation",
@@ -116,8 +116,8 @@ $(() => {
 
   let Company9 = new Company(
     "Mosaic Media Productions",
-    "Creative Director",
-    "Los Angeles",
+    "App Developer",
+    "Rome",
     false,
     "Mosaic Media Productions is a creative agency specializing in multimedia content creation. Join our team to lead and inspire a talented group of creatives in producing captivating visual experiences.",
     "As a Creative Director, you will oversee the creative process, collaborate with clients, and ensure the delivery of high-quality multimedia projects.",
@@ -129,8 +129,8 @@ $(() => {
 
   let Company10 = new Company(
     "BlueBios Pharmaceuticals",
-    "Biomedical Research Scientist",
-    "San Diego",
+    "Back End Developer",
+    "Paris",
     true,
     "BlueBios Pharmaceuticals is dedicated to advancing biomedical research and developing innovative solutions for healthcare. Join our team to contribute to groundbreaking discoveries in the field of life sciences.",
     "As a Biomedical Research Scientist, you will conduct experiments, analyze data, and contribute to the development of novel pharmaceutical products.",
@@ -143,6 +143,7 @@ $(() => {
   let ourCompanies = [Company1, Company2, Company3, Company4, Company5, Company6, Company7, Company8, Company9, Company10];
 
   const showCompanyInfo = (companies) => {
+    $(".main-content").empty();
     companies.forEach((company) => {
       $(".main-content").append(`
       <div class="company-container">
@@ -181,4 +182,72 @@ $(() => {
   setupDropdown("#locationDropdownBtn", "#location");
   setupDropdown("#roleDropdownBtn", "#role");
   setupDropdown("#fulltimeDropdownBtn", "#fulltime");
+
+
+  
+  //development filters functions
+
+  $(".fulltime-true").on("click", () => {
+
+    let attribute= $(".fulltime-true").attr("data-value");
+    console.log(attribute);
+
+    const filteredCompanies = ourCompanies.filter((item)=> {
+      return item.fulltime===attribute;
+    })
+    //showCompanyInfo(ourCompanies);
+    
+    showCompanyInfo(filteredCompanies);
+  })
+  $(".fulltime-false").on("click", () => {
+
+    let attribute= $(".fulltime-false").attr("data-value");
+    console.log(attribute);
+
+    const filteredCompanies = ourCompanies.filter((item)=> {
+      return item.fulltime===attribute;
+    })
+    //showCompanyInfo(ourCompanies);
+    
+    showCompanyInfo(filteredCompanies);
+  })
+  $(".location-Stockholm").on("click", () => {
+
+    let attribute= $(".location-Stockholm").attr("data-value");
+    console.log(attribute);
+
+    const filteredCompanies = ourCompanies.filter((item)=> {
+      return item.location===attribute;
+    })
+    //showCompanyInfo(ourCompanies);
+    
+    showCompanyInfo(filteredCompanies);
+  })
+  $(".location-Rome").on("click", () => {
+
+    let attribute= $(".location-Rome").attr("data-value");
+    console.log(attribute);
+
+    const filteredCompanies = ourCompanies.filter((item)=> {
+      return item.location===attribute;
+    })
+    //showCompanyInfo(ourCompanies);
+    
+    showCompanyInfo(filteredCompanies);
+  })
+  $(".location-Paris").on("click", () => {
+
+    let attribute= $(".location-Paris").attr("data-value");
+    console.log(attribute);
+
+    const filteredCompanies = ourCompanies.filter((item)=> {
+      return item.location===attribute;
+    })
+    //showCompanyInfo(ourCompanies);
+    
+    showCompanyInfo(filteredCompanies);
+  })
+
+
+
 });
