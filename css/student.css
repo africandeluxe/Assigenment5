@@ -11,6 +11,9 @@ html {
   height: 100vh;
 }
 
+h2 {
+  text-align: center;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -51,8 +54,10 @@ main {
   background-color: #3498db;
   border-radius: 20px;
   margin: 5px 0;
-  padding: 2px;
+  padding: 8px 8px;
   width: 70%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
 
 .company-img {
@@ -60,7 +65,9 @@ main {
   height: 100px;
   padding: 10px;
 }
-.company-description {
+
+.company-description,
+.company-role {
   text-align: center;
 }
 .main-content {
@@ -114,13 +121,16 @@ footer a {
 
 .locationbtn,
 .rolebtn,
-.fulltimebtn {
+.fulltimebtn,
+.resetbtn {
   background-color: #3498db;
   color: white;
-  padding: 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 12px 12px;
 }
 
 .locationbtn:hover,
@@ -132,6 +142,17 @@ footer a {
   background-color: #2980b9;
 }
 
+.reset-filter {
+  padding: 8px;
+}
+
+.resetbtn {
+  background-color: darkslateblue;
+  border: 2px solid #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  padding: 7px 7px;
+}
 /* The container <div> - needed to position the dropdown content */
 .dropdown-filter {
   position: relative;
