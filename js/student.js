@@ -190,7 +190,7 @@ $(() => {
   fulltimeYesClick();
   fulltimeNoClick();
 
-  //ROLE FILTERS
+  /*ROLE FILTERS
   let seniorSoftware = ourCompanies.filter((company) => {
     return company.role === "Senior Software Developer";
   });
@@ -239,12 +239,13 @@ $(() => {
   frontendDeveloperClick();
   uxDesignClick();
   dataScientistClick();
+  */
 
-  // LOCATION FILTERS
+  /* LOCATION FILTERS
   let cityStockholm = ourCompanies.filter((company) => {
     return company.location === "Stockholm";
   });
-
+/
   const cityStockholmClick = () => {
     $(".stockholm").on("click", () => {
       $(".main-content").empty();
@@ -277,14 +278,14 @@ $(() => {
   let cityNewYork = ourCompanies.filter((company) => {
     return company.location === "New York";
   });
-/*
+
   const cityNewYorkClick = () => {
     $(".new-york").on("click", () => {
       $(".main-content").empty();
       showCompanyInfo(cityNewYork);
     });
-  };*/
-/*
+  };
+
   let cityLosAngeles = ourCompanies.filter((company) => {
     return company.location === "Los Angeles";
   });
@@ -306,10 +307,17 @@ const filterMainFunction = (className, filterCategory, filterSpecificValue) => {
   })
 }
   //cityStockholmClick();
-  cityRomeClick();
-  cityParisClick();
+  //cityRomeClick();
+  //cityParisClick();
   //cityNewYorkClick();
   //cityLosAngelesClick();
+  filterMainFunction(".senior-software", "role", "Senior Software Developer");
+  filterMainFunction(".frontend-developer", "role", "Frontend Developer");
+  filterMainFunction(".ux-design", "role", "UX/UI Designer");
+  filterMainFunction(".data-scientist", "role", "Data Scientist");
+
+
+  
   filterMainFunction(".stockholm", "location", "Stockholm");
   filterMainFunction(".rome", "location", "Rome");
   filterMainFunction(".paris", "location", "Paris");
