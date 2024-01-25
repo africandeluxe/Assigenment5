@@ -159,9 +159,35 @@ $(() => {
   };
 
   showCompanyInfo(ourCompanies);
-  
-  // FILTER BUTTONS PART
+
   // F I L T E R S -_______-; Q(0.0)Q
+
+  let fulltimeYes = ourCompanies.filter((company) => {
+    return company.fulltime === "Yes";
+  });
+
+  const fulltimeYesClick = () => {
+    $(".fulltime-true").on("click", () => {
+      $(".main-content").empty();
+      showCompanyInfo(fulltimeYes);
+    });
+  };
+
+  let fulltimeNo = ourCompanies.filter((company) => {
+    return company.fulltime === "No";
+  });
+
+  const fulltimeNoClick = () => {
+    $(".fulltime-false").on("click", () => {
+      $(".main-content").empty();
+      showCompanyInfo(fulltimeNo);
+    });
+  };
+
+  fulltimeYesClick();
+  fulltimeNoClick();
+
+  // B U T T O N S
 
   const setupDropdown = (buttonId, divId) => {
     $(document).ready(function () {
