@@ -19,6 +19,23 @@ html {
   height: 100vh;
 }
 
+/* ----- NAVBAR ----*/
+nav a{
+  color:#fff;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+
+
 body {
   display: flex;
   flex-direction: column;

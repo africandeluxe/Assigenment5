@@ -50,6 +50,22 @@ nav ul {
   flex-direction: column;
   padding: var(--spacing-small);
 }
+
+/* ----- Navlink ----*/
+nav a{
+  color:#fff;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
 main {
   height: 85vh;
   overflow: scroll;

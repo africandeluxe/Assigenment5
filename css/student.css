@@ -24,6 +24,20 @@ header {
   border-bottom: 1px solid #fff;
 }
 
+
+nav a{
+  color:#fff;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 main {
   min-height: 70vh;
   display: flex;
@@ -31,6 +45,7 @@ main {
   padding: 10px;
 }
 
+*/
 .content {
   align-self: center;
 }
