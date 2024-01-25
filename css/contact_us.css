@@ -36,6 +36,13 @@ html {
   height: 100vh;
 }
 
+h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  color: white;
+  font-family: var(--boldest-font-family);
+}
+
 body {
   background: var(--background-color);
   display: flex;
@@ -46,58 +53,72 @@ body {
 
 .main-contact-us {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .field,
 textarea {
-    font-size: calc(0.7rem + 0.8vw);
-    margin: var(--spacing-small) 0;
-    color: var(--primary-text-color);
+  font-size: calc(0.7rem + 0.8vw);
+  margin: var(--spacing-small) 0;
+  color: var(--primary-text-color);
 }
 
 legend {
-  color:var(--primary-text-color);
+  color: var(--primary-text-color);
   font-size: calc(0.8rem + 1vw);
 }
 
 fieldset {
-    border: 3px solid white;
-    border-radius: 10%;
-    margin: var(--spacing-large) var(--spacing-main);
+  border: 3px solid white;
+  border-radius: 10%;
+  margin: var(--spacing-large) var(--spacing-main);
 }
 
 .send-button {
-    background-image: linear-gradient(#f8a4d8,#6d64ff);
-    border: 3px solid var(--primary-text-color);
-    border-radius: 10%;
-    color: var(--primary-text-color);
-    font-size: calc(0.8rem + 1vw);
-    margin: 6px 12px;
-    padding: var(--spacing-main);
-    transition: all linear 0.4s;
+  background-image: linear-gradient(#f8a4d8, #6d64ff);
+  border: 3px solid var(--primary-text-color);
+  border-radius: 10%;
+  color: var(--primary-text-color);
+  font-size: calc(0.8rem + 1vw);
+  margin: 6px 12px;
+  padding: var(--spacing-main);
+  transition: all linear 0.4s;
 }
 
+.contact-img {
+  width: 300px;
+  height: auto;
+  border-radius: 30px;
+}
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 button:hover {
-    background-image: linear-gradient(#6d64ff,#f8a4d8);
-    color: black;
-    cursor: pointer;
+  background-image: linear-gradient(#6d64ff, #f8a4d8);
+  color: black;
+  cursor: pointer;
 }
 
 textarea {
-    height: 80px;
-    width: auto;;
+  height: 80px;
+  width: auto;
 }
 
 .required::after {
-    color: red;
-    content: "*";
+  color: red;
+  content: "*";
 }
 
-input[type=text] {
-    border: 2px solid black;
-    border-radius: 5%;
-    font-size: calc(0.7rem + 1vw);
-    padding: var(--spacing-small);
+input[type="text"] {
+  border: 2px solid black;
+  border-radius: 5%;
+  font-size: calc(0.7rem + 1vw);
+  padding: var(--spacing-small);
 }
 
 footer {
@@ -116,7 +137,6 @@ footer a {
 }
 
 @media screen and (min-width: 600px) {
-  
   fieldset {
     border: 4px solid white;
     margin: 24px 72px;
