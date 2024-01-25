@@ -27,7 +27,7 @@ $(() => {
   let Company2 = new Company(
     "Digital Dynamics",
     "App Developer",
-    "Rome",
+    "New York",
     false,
     "Digital Dynamics is a creative design studio passionate about user experience and visual aesthetics. Join us to create stunning and user-friendly designs that captivate audiences around the globe.",
     "As a UX/UI Designer, you will be responsible for crafting visually appealing and intuitive user interfaces. Collaborate with cross-functional teams to bring concepts to life.",
@@ -277,14 +277,14 @@ $(() => {
   let cityNewYork = ourCompanies.filter((company) => {
     return company.location === "New York";
   });
-
+/*
   const cityNewYorkClick = () => {
     $(".new-york").on("click", () => {
       $(".main-content").empty();
       showCompanyInfo(cityNewYork);
     });
-  };
-///////////////////////
+  };*/
+/*
   let cityLosAngeles = ourCompanies.filter((company) => {
     return company.location === "Los Angeles";
   });
@@ -293,7 +293,7 @@ $(() => {
       $(".main-content").empty();
       showCompanyInfo(cityLosAngeles);
     });
-  };
+  };*/
 //Davide main function
 
 const filterMainFunction = (className, filterCategory, filterSpecificValue) => {  //ex .los-angeles, location, ""Los Angeles"
@@ -305,12 +305,18 @@ const filterMainFunction = (className, filterCategory, filterSpecificValue) => {
     showCompanyInfo(filteredAnnouncements);
   })
 }
-  cityStockholmClick();
+  //cityStockholmClick();
   cityRomeClick();
   cityParisClick();
-  cityNewYorkClick();
+  //cityNewYorkClick();
   //cityLosAngelesClick();
+  filterMainFunction(".stockholm", "location", "Stockholm");
+  filterMainFunction(".rome", "location", "Rome");
+  filterMainFunction(".paris", "location", "Paris");
   filterMainFunction(".los-angeles", "location", "Los Angeles");
+  filterMainFunction(".new-york", "location", "New York");
+  
+
 
   // RESET FILTERS
 
