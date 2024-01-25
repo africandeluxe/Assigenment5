@@ -143,7 +143,7 @@ $(() => {
   let ourCompanies = [Company1, Company2, Company3, Company4, Company5, Company6, Company7, Company8, Company9, Company10];
 
   const showCompanyInfo = (companies) => {
-    $(".main-content").empty();
+    
     companies.forEach((company) => {
       $(".main-content").append(`
       <div class="company-container">
@@ -301,9 +301,9 @@ $(() => {
   //cityNewYorkClick();
   //cityLosAngelesClick();
 //Davide main function
+let isFilterReset=false;
 
-
-const filterMainFunction = (className, filterCategory, filterSpecificValue) => {  //ex .los-angeles, location, ""Los Angeles"
+const filterMainFunction = (className, filterCategory, filterSpecificValue) => {  
   let filteredAnnouncements = ourCompanies.filter((company)=> {
     return company[filterCategory]=== filterSpecificValue;
   })
@@ -331,6 +331,7 @@ const filterMainFunction = (className, filterCategory, filterSpecificValue) => {
   const resetFilters = () => {
     $(".resetbtn").on("click", () => {
       $(".main-content").empty();
+      isFilterReset=true;
       showCompanyInfo(ourCompanies);
     });
   };
