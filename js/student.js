@@ -284,23 +284,33 @@ $(() => {
       showCompanyInfo(cityNewYork);
     });
   };
-
+///////////////////////
   let cityLosAngeles = ourCompanies.filter((company) => {
     return company.location === "Los Angeles";
   });
-
   const cityLosAngelesClick = () => {
     $(".los-angeles").on("click", () => {
       $(".main-content").empty();
       showCompanyInfo(cityLosAngeles);
     });
   };
+//Davide main function
 
+const filterMainFunction = (className, filterCategory, filterSpecificValue) => {  //ex .los-angeles, location, ""Los Angeles"
+  let filteredAnnouncements = ourCompanies.filter((company)=> {
+    return company[filterCategory]=== filterSpecificValue;
+  })
+  $(className).on("click", () => {
+    $(".main-content").empty();
+    showCompanyInfo(filteredAnnouncements);
+  })
+}
   cityStockholmClick();
   cityRomeClick();
   cityParisClick();
   cityNewYorkClick();
-  cityLosAngelesClick();
+  //cityLosAngelesClick();
+  filterMainFunction(".los-angeles", "location", "Los Angeles");
 
   // RESET FILTERS
 
@@ -310,6 +320,7 @@ $(() => {
       showCompanyInfo(ourCompanies);
     });
   };
+  
 
   resetFilters();
 
