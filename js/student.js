@@ -299,6 +299,18 @@ $(() => {
   cityParisClick();
   cityNewYorkClick();
   cityLosAngelesClick();
+
+  // RESET FILTERS
+
+  const resetFilters = () => {
+    $(".resetbtn").on("click", () => {
+      $(".main-content").empty();
+      showCompanyInfo(ourCompanies);
+    });
+  };
+
+  resetFilters();
+
   // B U T T O N S
 
   const setupDropdown = (buttonId, divId) => {
