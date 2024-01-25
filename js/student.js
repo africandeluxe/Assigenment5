@@ -39,7 +39,7 @@ $(() => {
   let Company3 = new Company(
     "Quantum Innovations",
     "Data Scientist",
-    "Chicago",
+    "Stockholm",
     true,
     "Quantum Innovations is at the forefront of data science, leveraging cutting-edge technologies to extract valuable insights. Join our team to work on challenging projects that drive innovation and impact.",
     "As a Data Scientist, you will analyze complex datasets, develop predictive models, and contribute to the development of data-driven solutions.",
@@ -51,8 +51,8 @@ $(() => {
 
   let Company4 = new Company(
     "GreenTech Solutions",
-    "Environmental Engineer",
-    "Seattle",
+    "Senior Software Developer",
+    "Paris",
     true,
     "GreenTech Solutions is committed to sustainable practices and environmental conservation. Join our team to contribute to eco-friendly projects that make a positive impact on the planet.",
     "As an Environmental Engineer, you will design and implement solutions to address environmental challenges. Collaborate with experts in the field to create a greener future.",
@@ -64,8 +64,8 @@ $(() => {
 
   let Company5 = new Company(
     "CyberGuard Solutions",
-    "Cybersecurity Analyst",
-    "Washington, D.C.",
+    "Senior Software Developer",
+    "Rome",
     true,
     "CyberGuard Solutions is dedicated to safeguarding digital assets and protecting against cyber threats. Join our team to be on the frontline of cybersecurity and make a difference in the digital landscape.",
     "As a Cybersecurity Analyst, you will monitor security systems, analyze threats, and implement measures to ensure the confidentiality and integrity of information.",
@@ -77,8 +77,8 @@ $(() => {
 
   let Company6 = new Company(
     "HealthHub Technologies",
-    "Healthcare Software Engineer",
-    "Boston",
+    "UX/UI Designer",
+    "Rome",
     true,
     "HealthHub Technologies is revolutionizing healthcare through innovative software solutions. Join our team to develop applications that enhance patient care and streamline medical processes.",
     "As a Healthcare Software Engineer, you will design and implement software for healthcare systems, ensuring reliability and compliance with industry standards.",
@@ -90,8 +90,8 @@ $(() => {
 
   let Company7 = new Company(
     "SwiftLogistics",
-    "Supply Chain Analyst",
-    "Dallas",
+    "Data Scientist",
+    "Paris",
     true,
     "SwiftLogistics is a leader in supply chain management, providing efficient solutions to clients worldwide. Join our team to optimize logistics and contribute to the success of global businesses.",
     "As a Supply Chain Analyst, you will analyze data, optimize transportation routes, and implement strategies to enhance the efficiency of supply chain operations.",
@@ -103,8 +103,8 @@ $(() => {
 
   let Company8 = new Company(
     "AeroInnovate",
-    "Aerospace Engineer",
-    "Houston",
+    "Frontend Developer",
+    "Stockholm",
     true,
     "AeroInnovate is a pioneer in aerospace engineering, pushing the boundaries of flight and space exploration. Join our team to work on groundbreaking projects and shape the future of aerospace technology.",
     "As an Aerospace Engineer, you will design and test aircraft and spacecraft components, ensuring they meet safety and performance standards.",
@@ -116,7 +116,7 @@ $(() => {
 
   let Company9 = new Company(
     "Mosaic Media Productions",
-    "Creative Director",
+    "Frontend Developer",
     "Los Angeles",
     false,
     "Mosaic Media Productions is a creative agency specializing in multimedia content creation. Join our team to lead and inspire a talented group of creatives in producing captivating visual experiences.",
@@ -129,8 +129,8 @@ $(() => {
 
   let Company10 = new Company(
     "BlueBios Pharmaceuticals",
-    "Biomedical Research Scientist",
-    "San Diego",
+    "Data Scientist",
+    "Los Angeles",
     true,
     "BlueBios Pharmaceuticals is dedicated to advancing biomedical research and developing innovative solutions for healthcare. Join our team to contribute to groundbreaking discoveries in the field of life sciences.",
     "As a Biomedical Research Scientist, you will conduct experiments, analyze data, and contribute to the development of novel pharmaceutical products.",
@@ -162,6 +162,7 @@ $(() => {
 
   // F I L T E R S -_______-; Q(0.0)Q
 
+  //FULLTIME FILTER
   let fulltimeYes = ourCompanies.filter((company) => {
     return company.fulltime === "Yes";
   });
@@ -187,6 +188,117 @@ $(() => {
   fulltimeYesClick();
   fulltimeNoClick();
 
+  //ROLE FILTERS
+  let seniorSoftware = ourCompanies.filter((company) => {
+    return company.role === "Senior Software Developer";
+  });
+
+  const seniorSoftwareClick = () => {
+    $(".senior-software").on("click", () => {
+      $(".main-content").empty();
+      showCompanyInfo(seniorSoftware);
+    });
+  };
+
+  let frontendDeveloper = ourCompanies.filter((company) => {
+    return company.role === "Frontend Developer";
+  });
+
+  const frontendDeveloperClick = () => {
+    $(".frontend-developer").on("click", () => {
+      $(".main-content").empty();
+      showCompanyInfo(frontendDeveloper);
+    });
+  };
+
+  let uxDesign = ourCompanies.filter((company) => {
+    return company.role === "UX/UI Designer";
+  });
+
+  const uxDesignClick = () => {
+    $(".ux-design").on("click", () => {
+      $(".main-content").empty();
+      showCompanyInfo(uxDesign);
+    });
+  };
+
+  let dataScientist = ourCompanies.filter((company) => {
+    return company.role === "Data Scientist";
+  });
+
+  const dataScientistClick = () => {
+    $(".data-scientist").on("click", () => {
+      $(".main-content").empty();
+      showCompanyInfo(dataScientist);
+    });
+  };
+
+  seniorSoftwareClick();
+  frontendDeveloperClick();
+  uxDesignClick();
+  dataScientistClick();
+
+  // LOCATION FILTERS
+  let cityStockholm = ourCompanies.filter((company) => {
+    return company.location === "Stockholm";
+  });
+
+  const cityStockholmClick = () => {
+    $(".stockholm").on("click", () => {
+      $(".main-content").empty();
+      showCompanyInfo(cityStockholm);
+    });
+  };
+
+  let cityRome = ourCompanies.filter((company) => {
+    return company.location === "Rome";
+  });
+
+  const cityRomeClick = () => {
+    $(".rome").on("click", () => {
+      $(".main-content").empty();
+      showCompanyInfo(cityRome);
+    });
+  };
+
+  let cityParis = ourCompanies.filter((company) => {
+    return company.location === "Paris";
+  });
+
+  const cityParisClick = () => {
+    $(".paris").on("click", () => {
+      $(".main-content").empty();
+      showCompanyInfo(cityParis);
+    });
+  };
+
+  let cityNewYork = ourCompanies.filter((company) => {
+    return company.location === "New York";
+  });
+
+  const cityNewYorkClick = () => {
+    $(".new-york").on("click", () => {
+      $(".main-content").empty();
+      showCompanyInfo(cityNewYork);
+    });
+  };
+
+  let cityLosAngeles = ourCompanies.filter((company) => {
+    return company.location === "Los Angeles";
+  });
+
+  const cityLosAngelesClick = () => {
+    $(".los-angeles").on("click", () => {
+      $(".main-content").empty();
+      showCompanyInfo(cityLosAngeles);
+    });
+  };
+
+  cityStockholmClick();
+  cityRomeClick();
+  cityParisClick();
+  cityNewYorkClick();
+  cityLosAngelesClick();
   // B U T T O N S
 
   const setupDropdown = (buttonId, divId) => {
