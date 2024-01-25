@@ -66,28 +66,72 @@ textarea {
   color: var(--primary-text-color);
 }
 
-legend {
+legend,
+label {
   color: var(--primary-text-color);
   font-size: calc(0.8rem + 1vw);
+  font-family: var(--primary-font-family);
+}
+
+label.required,
+label {
+  text-align: center;
+}
+
+input#first-name,
+input#telephone,
+textarea#message {
+  border-radius: 10px;
+  color: black;
+}
+
+input#first-name,
+input#telephone {
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 fieldset {
   border: 3px solid white;
-  border-radius: 10%;
+  border-radius: 30px;
   margin: var(--spacing-large) var(--spacing-main);
+  font-family: var(--primary-font-family);
 }
 
 .send-button {
   background-image: linear-gradient(#f8a4d8, #6d64ff);
   border: 3px solid var(--primary-text-color);
-  border-radius: 10%;
+  border-radius: 30px;
   color: var(--primary-text-color);
   font-size: calc(0.8rem + 1vw);
   margin: 6px 12px;
   padding: var(--spacing-main);
   transition: all linear 0.4s;
+  font-family: var(--primary-font-family);
 }
 
+.user-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-information {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: space-between;
+}
+
+.field,
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 .contact-img {
   width: 300px;
   height: auto;
@@ -97,6 +141,7 @@ fieldset {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 20px;
 }
 button:hover {
   background-image: linear-gradient(#6d64ff, #f8a4d8);
