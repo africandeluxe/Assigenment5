@@ -38,6 +38,12 @@ html {
   height: 100vh;
 }
 
+header {
+  padding: 12px;
+  color: var(--primary-text-color);
+  border-bottom: 1px solid #fff;
+}
+
 body {
   background: var(--background-color);
   display: flex;
