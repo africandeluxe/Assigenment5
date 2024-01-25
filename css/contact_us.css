@@ -126,11 +126,12 @@ fieldset {
   flex-direction: column;
 }
 
-.contact-information {
+.contact-information,
+.message-wrapper {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: space-between;
+  padding: 20px;
 }
 
 .field,
