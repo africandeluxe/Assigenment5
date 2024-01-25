@@ -164,7 +164,7 @@ $(() => {
 
   // F I L T E R S -_______-; Q(0.0)Q
 
-  //FULLTIME FILTER
+  /*FULLTIME FILTER
   let fulltimeYes = ourCompanies.filter((company) => {
     return company.fulltime === "Yes";
   });
@@ -189,7 +189,7 @@ $(() => {
 
   fulltimeYesClick();
   fulltimeNoClick();
-
+*/
   /*ROLE FILTERS
   let seniorSoftware = ourCompanies.filter((company) => {
     return company.role === "Senior Software Developer";
@@ -295,6 +295,11 @@ $(() => {
       showCompanyInfo(cityLosAngeles);
     });
   };*/
+   //cityStockholmClick();
+  //cityRomeClick();
+  //cityParisClick();
+  //cityNewYorkClick();
+  //cityLosAngelesClick();
 //Davide main function
 
 const filterMainFunction = (className, filterCategory, filterSpecificValue) => {  //ex .los-angeles, location, ""Los Angeles"
@@ -306,18 +311,15 @@ const filterMainFunction = (className, filterCategory, filterSpecificValue) => {
     showCompanyInfo(filteredAnnouncements);
   })
 }
-  //cityStockholmClick();
-  //cityRomeClick();
-  //cityParisClick();
-  //cityNewYorkClick();
-  //cityLosAngelesClick();
+  //fulltime
+  filterMainFunction(".fulltime-true", "fulltime", "Yes");
+  filterMainFunction(".fulltime-false", "fulltime", "No");
+  //Roles
   filterMainFunction(".senior-software", "role", "Senior Software Developer");
   filterMainFunction(".frontend-developer", "role", "Frontend Developer");
   filterMainFunction(".ux-design", "role", "UX/UI Designer");
   filterMainFunction(".data-scientist", "role", "Data Scientist");
-
-
-  
+  //Location
   filterMainFunction(".stockholm", "location", "Stockholm");
   filterMainFunction(".rome", "location", "Rome");
   filterMainFunction(".paris", "location", "Paris");
