@@ -192,13 +192,62 @@ $(() => {
     let attribute= $(".fulltime-true").attr("data-value");
     console.log(attribute);
 
-    const filteredCompanies= ourCompanies.filter((item)=> {
+    const filteredCompanies = ourCompanies.filter((item)=> {
       return item.fulltime===attribute;
     })
     //showCompanyInfo(ourCompanies);
-    console.log(filteredCompanies)
+    
     showCompanyInfo(filteredCompanies);
-
-
   })
+  $(".fulltime-false").on("click", () => {
+
+    let attribute= $(".fulltime-false").attr("data-value");
+    console.log(attribute);
+
+    const filteredCompanies = ourCompanies.filter((item)=> {
+      return item.fulltime===attribute;
+    })
+    //showCompanyInfo(ourCompanies);
+    
+    showCompanyInfo(filteredCompanies);
+  })
+  $(".location-Stockholm").on("click", () => {
+
+    let attribute= $(".location-Stockholm").attr("data-value");
+    console.log(attribute);
+
+    const filteredCompanies = ourCompanies.filter((item)=> {
+      return item.location===attribute;
+    })
+    //showCompanyInfo(ourCompanies);
+    
+    showCompanyInfo(filteredCompanies);
+  })
+  $(".location-Rome").on("click", () => {
+
+    let attribute= $(".location-Rome").attr("data-value");
+    console.log(attribute);
+
+    const filteredCompanies = ourCompanies.filter((item)=> {
+      return item.location===attribute;
+    })
+    //showCompanyInfo(ourCompanies);
+    
+    showCompanyInfo(filteredCompanies);
+  })
+  $(".location-Paris").on("click", () => {
+
+    let attribute= $(".location-Paris").attr("data-value");
+    console.log(attribute);
+
+    const filteredCompanies = ourCompanies.filter((item)=> {
+      return item.location===attribute;
+    })
+    //showCompanyInfo(ourCompanies);
+    
+    showCompanyInfo(filteredCompanies);
+  })
+
+
+
 });
