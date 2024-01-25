@@ -149,7 +149,8 @@ $(() => {
         <img class="company-img" src="${company.smallimg}" alt="${company.name}">
         <div class="company-text">  
         <h2 class="company-title"> ${company.name} </h2> 
-        <p class="company-role"> We are looking for a ${company.role} </p> 
+        <p class="company-role"> We are looking for a ${company.role} </p>
+        <p class="company-location"> Location ${company.location} </p>  
         <p class="company-fulltime"> Full-time: ${company.fulltime} </p> 
         <p class="company-description"> ${company.description} </p> 
         </div> 
