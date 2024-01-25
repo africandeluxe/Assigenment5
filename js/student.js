@@ -143,6 +143,7 @@ $(() => {
   let ourCompanies = [Company1, Company2, Company3, Company4, Company5, Company6, Company7, Company8, Company9, Company10];
 
   const showCompanyInfo = (companies) => {
+    $(".main-content").empty();
     companies.forEach((company) => {
       $(".main-content").append(`
       <div class="company-container">
@@ -183,7 +184,8 @@ $(() => {
   setupDropdown("#fulltimeDropdownBtn", "#fulltime");
 
 
-    
+  
+  //development filters functions
 
   $(".fulltime-true").on("click", () => {
 
@@ -191,11 +193,11 @@ $(() => {
     console.log(attribute);
 
     const filteredCompanies= ourCompanies.filter((item)=> {
-      return item.location===attribute;
+      return item.fulltime===attribute;
     })
     //showCompanyInfo(ourCompanies);
     console.log(filteredCompanies)
-
+    showCompanyInfo(filteredCompanies);
 
 
   })
