@@ -13,8 +13,8 @@ $(() => {
   }
   let Company1 = new Company(
     "InnovateTech Solutions",
-    "Senior Software Developer",
-    "New York",
+    "Front End Developer",
+    "Stockholm",
     true,
     "InnovateTech Solutions is a dynamic tech company pushing the boundaries of innovation. Join our team to work on cutting-edge projects and make a lasting impact in the world of technology.",
     "As a Senior Software Developer, you will lead the development of complex software solutions, mentor junior developers, and contribute to the overall success of our projects.",
@@ -26,8 +26,8 @@ $(() => {
 
   let Company2 = new Company(
     "Digital Dynamics",
-    "UX/UI Designer",
-    "Los Angeles",
+    "App Developer",
+    "Rome",
     false,
     "Digital Dynamics is a creative design studio passionate about user experience and visual aesthetics. Join us to create stunning and user-friendly designs that captivate audiences around the globe.",
     "As a UX/UI Designer, you will be responsible for crafting visually appealing and intuitive user interfaces. Collaborate with cross-functional teams to bring concepts to life.",
@@ -143,6 +143,7 @@ $(() => {
   let ourCompanies = [Company1, Company2, Company3, Company4, Company5, Company6, Company7, Company8, Company9, Company10];
 
   const showCompanyInfo = (companies) => {
+    $(".main-content").empty();
     companies.forEach((company) => {
       $(".main-content").append(`
       <div class="company-container">
@@ -332,4 +333,62 @@ $(() => {
   setupDropdown("#locationDropdownBtn", "#location");
   setupDropdown("#roleDropdownBtn", "#role");
   setupDropdown("#fulltimeDropdownBtn", "#fulltime");
+
+  //development filters functions
+
+  $(".fulltime-true").on("click", () => {
+    let attribute = $(".fulltime-true").attr("data-value");
+    console.log(attribute);
+
+    const filteredCompanies = ourCompanies.filter((item) => {
+      return item.fulltime === attribute;
+    });
+    //showCompanyInfo(ourCompanies);
+
+    showCompanyInfo(filteredCompanies);
+  });
+  $(".fulltime-false").on("click", () => {
+    let attribute = $(".fulltime-false").attr("data-value");
+    console.log(attribute);
+
+    const filteredCompanies = ourCompanies.filter((item) => {
+      return item.fulltime === attribute;
+    });
+    //showCompanyInfo(ourCompanies);
+
+    showCompanyInfo(filteredCompanies);
+  });
+  $(".location-Stockholm").on("click", () => {
+    let attribute = $(".location-Stockholm").attr("data-value");
+    console.log(attribute);
+
+    const filteredCompanies = ourCompanies.filter((item) => {
+      return item.location === attribute;
+    });
+    //showCompanyInfo(ourCompanies);
+
+    showCompanyInfo(filteredCompanies);
+  });
+  $(".location-Rome").on("click", () => {
+    let attribute = $(".location-Rome").attr("data-value");
+    console.log(attribute);
+
+    const filteredCompanies = ourCompanies.filter((item) => {
+      return item.location === attribute;
+    });
+    //showCompanyInfo(ourCompanies);
+
+    showCompanyInfo(filteredCompanies);
+  });
+  $(".location-Paris").on("click", () => {
+    let attribute = $(".location-Paris").attr("data-value");
+    console.log(attribute);
+
+    const filteredCompanies = ourCompanies.filter((item) => {
+      return item.location === attribute;
+    });
+    //showCompanyInfo(ourCompanies);
+
+    showCompanyInfo(filteredCompanies);
+  });
 });
