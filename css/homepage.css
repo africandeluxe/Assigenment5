@@ -86,6 +86,8 @@ footer {
   text-align: center;
   padding: 24px;
   max-height: 15%;
+  background-color: black;
+
 }
 
 footer a {
