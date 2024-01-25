@@ -101,10 +101,16 @@ input#telephone {
 }
 
 fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: 3px solid white;
   border-radius: 30px;
   margin: var(--spacing-large) var(--spacing-main);
   font-family: var(--primary-font-family);
+  height: auto;
+  width: 80%;
 }
 
 .send-button {
@@ -134,11 +140,30 @@ fieldset {
   padding: 20px;
 }
 
-.field,
-form {
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-information {
+  align-items: center;
+  width: 80%;
+  height: auto;
+  margin: var(--spacing-large) var(--spacing-main);
+}
+
+.field {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .contact-img {
@@ -159,8 +184,7 @@ button:hover {
 }
 
 textarea {
-  height: 80px;
-  width: auto;
+  height: 100px;
 }
 
 .required::after {
@@ -203,10 +227,6 @@ footer a {
     border: 4px solid white;
     margin: 24px 72px;
     border: 5px solid white;
-    margin: 24px 120px;
-  }
-
-  .send-button {
   }
 
   .contact-information,
