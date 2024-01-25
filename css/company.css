@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -38,6 +40,8 @@ header {
 nav {
   top: 0;
   position: sticky;
+  display: block;
+  font-family: "K2D-Regular";
 }
 
 nav ul {
@@ -50,6 +54,22 @@ nav ul {
   flex-direction: column;
   padding: var(--spacing-small);
 }
+
+/* ----- Navlink ----*/
+nav a{
+  color:#fff;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
 main {
   height: 85vh;
   overflow: scroll;
