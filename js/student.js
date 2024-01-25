@@ -302,6 +302,7 @@ $(() => {
   //cityLosAngelesClick();
 //Davide main function
 
+
 const filterMainFunction = (className, filterCategory, filterSpecificValue) => {  //ex .los-angeles, location, ""Los Angeles"
   let filteredAnnouncements = ourCompanies.filter((company)=> {
     return company[filterCategory]=== filterSpecificValue;
@@ -326,10 +327,7 @@ const filterMainFunction = (className, filterCategory, filterSpecificValue) => {
   filterMainFunction(".los-angeles", "location", "Los Angeles");
   filterMainFunction(".new-york", "location", "New York");
   
-
-
   // RESET FILTERS
-
   const resetFilters = () => {
     $(".resetbtn").on("click", () => {
       $(".main-content").empty();
@@ -337,11 +335,9 @@ const filterMainFunction = (className, filterCategory, filterSpecificValue) => {
     });
   };
   
-
   resetFilters();
 
   // B U T T O N S
-
   const setupDropdown = (buttonId, divId) => {
     $(document).ready(function () {
       $(buttonId).on("click", function () {
