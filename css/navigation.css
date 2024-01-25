@@ -42,8 +42,14 @@ nav ul {
 }
 
 /* ----- Navlink ----*/
+nav {
+  font-family: "K2D-Regular";
+
+}
+
 nav a{
   color:#fff;
+  font-family: "K2D-Regular";
 }
 
 a:link {
