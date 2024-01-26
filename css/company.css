@@ -185,6 +185,7 @@ p {
   background: var(--background-color);
   color: var(--primary-text-color);
   border-radius: 5px;
+  width: 5.2rem;
   transform: translateY(30%);
 }
 
