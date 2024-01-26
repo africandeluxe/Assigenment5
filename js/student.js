@@ -162,22 +162,17 @@ $(() => {
 
   showCompanyInfo(ourCompanies);
 
-  
-let filterReset=true;
 
 const filterMainFunction = (className, filterCategory, filterSpecificValue) => {
   $(className).on("click", () => {
     $(".main-content").empty();
     let filteredAnnouncements = ourCompanies.filter((company)=> {
       return company[filterCategory]=== filterSpecificValue;
-  })
+    })
   showCompanyInfo(filteredAnnouncements);
-
-  
   })
-  
-  
 }
+
   //fulltime
   filterMainFunction(".fulltime-true", "fulltime", "Yes");
   filterMainFunction(".fulltime-false", "fulltime", "No");
@@ -197,8 +192,6 @@ const filterMainFunction = (className, filterCategory, filterSpecificValue) => {
   const resetFilters = () => {
     $(".resetbtn").on("click", () => {
       $(".main-content").empty();
-      filterReset=true;
-      ourCompanies = [Company1, Company2, Company3, Company4, Company5, Company6, Company7, Company8, Company9, Company10];
       showCompanyInfo(ourCompanies);
     });
   };
