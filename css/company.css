@@ -163,6 +163,9 @@ button a {
   color: var(--primary-text-color);
   padding: 1.2rem;
 }
+
+/*---- FOOTER ---*/
+
 footer {
   background: var(--primary-gradient-background);
   text-decoration: none;
@@ -170,10 +173,51 @@ footer {
   color: var(--primary-text-color);
   text-align: center;
   padding: 24px;
+  background-color: black;
 }
 
 footer a {
   text-decoration: none;
 }
+
+.footer-content h3 {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 48px;
+  height: 100px;
+}
+
+.footer-content p {
+  margin: 20px;
+
+}
+.footer-bottom p {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+
+.footer-content h3 {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 48px;
+  height: 100px;
+}
+
+.footer-content p {
+  margin: 20px;
+
+}
+.footer-bottom p {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-align: center;
+  margin: 10px auto;
+}
+
 
 

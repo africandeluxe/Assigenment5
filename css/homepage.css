@@ -76,6 +76,8 @@ button a {
   padding: 1.2rem;
 }
 
+/* ---- Footer ----*/
+
 footer {
   background: var(--primary-gradient-background);
   text-decoration: none;
@@ -84,10 +86,31 @@ footer {
   text-align: center;
   padding: 24px;
   max-height: 15%;
+  background-color: black;
+
 }
 
 footer a {
   text-decoration: none;
+}
+
+.footer-content h3 {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 48px;
+  height: 100px;
+}
+
+.footer-content p {
+  margin: 20px;
+
+}
+.footer-bottom p {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-align: center;
+  margin: 10px auto;
 }
 
 /* SLIDESHOW STYLING */
