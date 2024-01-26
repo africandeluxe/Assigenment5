@@ -195,6 +195,9 @@ button a {
   color: var(--primary-text-color);
   padding: 1.2rem;
 }
+
+/*---- FOOTER ---*/
+
 footer {
   background: var(--primary-gradient-background);
   text-decoration: none;
@@ -202,13 +205,12 @@ footer {
   color: var(--primary-text-color);
   text-align: center;
   padding: 24px;
+  background-color: black;
 }
 
 footer a {
   text-decoration: none;
 }
-
-/*---- FOOTER ---*/
 
 .footer-content h3 {
   font-size: 24px;

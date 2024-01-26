@@ -140,6 +140,7 @@ footer {
   padding: var(--spacing-large);
   text-align: center;
   text-decoration: none;
+  background-color: black;
 }
 
 footer a {
