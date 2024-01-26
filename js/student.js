@@ -143,9 +143,9 @@ $(() => {
   let ourCompanies = [Company1, Company2, Company3, Company4, Company5, Company6, Company7, Company8, Company9, Company10];//inserire in reset per ripristinare????
 
   const showCompanyInfo = (companies) => {
-    
+    const companyContent = $('.main-content').empty();
     companies.forEach((company) => {
-      $(".main-content").append(`
+      const profile= $(".main-content").append(`
       <div class="company-container">
         <img class="company-img" src="${company.smallimg}" alt="${company.name}">
         <div class="company-text">  
@@ -157,14 +157,46 @@ $(() => {
         <button class="read-more">View Profile</button>
         </div> 
       </div>
-    `);
+    `)
+    $(".main-content").find('.read-more').on('click', () => {
+      const modalContent = $(`
+        <div class="modal" id="modal">
+          <div class="modal-header">
+          <img class="company-img" src="${company.smallimg}" alt="${company.name}">
+            <div class="title">${company.name} </div>
+            <button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+          <h3>${company.role}</h3>
+            </br>
+            <p>Requirements: ${company.requirements}</p>
+            </br>
+            <p>Bonus: ${company.bonus}</p>
+          </div>
+        </div>
+        <div class="active" id="overlay"></div>
+      `);
+
+      modalContent.find('.close-button, #overlay').on('click', () => {
+        modalContent.removeClass('active');
+        $('#overlay').removeClass('active');
+        showCompanyInfo(ourCompanies);
+      });
+
+      companyContent.empty().append(modalContent);
+      modalContent.addClass('active');
+      $('#overlay').addClass('active');
+    });
+
+    companyContent.append(profile);
+
     });
   };
 
   showCompanyInfo(ourCompanies);
 
 
-const filterMainFunction = (className, filterCategory, filterSpecificValue) => {
+const filterMainFunction = (className, filterCategory, filterSpecificValue) => {//ex .profile , fulltime, true
   $(className).on("click", () => {
     $(".main-content").empty();
     let filteredAnnouncements = ourCompanies.filter((company)=> {
