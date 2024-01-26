@@ -140,7 +140,7 @@ $(() => {
     "bluebios_big.jpg"
   );
 
-  let ourCompanies = [Company1, Company2, Company3, Company4, Company5, Company6, Company7, Company8, Company9, Company10];
+  let ourCompanies = [Company1, Company2, Company3, Company4, Company5, Company6, Company7, Company8, Company9, Company10];//inserire in reset per ripristinare????
 
   const showCompanyInfo = (companies) => {
     
@@ -166,7 +166,7 @@ $(() => {
 let isFilterReset=false;
 
 const filterMainFunction = (className, filterCategory, filterSpecificValue) => {  
-  let filteredAnnouncements = ourCompanies.filter((company)=> {
+  let filteredAnnouncements = ourCompanies.filter((company)=> {//try with map????-Davide//168-171 per skistemare
     return company[filterCategory]=== filterSpecificValue;
   })
   $(className).on("click", () => {
@@ -193,7 +193,7 @@ const filterMainFunction = (className, filterCategory, filterSpecificValue) => {
   const resetFilters = () => {
     $(".resetbtn").on("click", () => {
       $(".main-content").empty();
-      isFilterReset=true;
+      isFilterReset=true;//invertire filterReset=false
       showCompanyInfo(ourCompanies);
     });
   };
