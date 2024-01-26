@@ -102,6 +102,10 @@ footer a {
   height: 100px;
 }
 
+.footer-content p {
+  margin: 20px;
+
+}
 .footer-bottom p {
   font-size: 14px;
   word-spacing: 2px;
