@@ -37,38 +37,6 @@ header {
   border-bottom: 1px solid #fff;
 }
 
-nav {
-  top: 0;
-  position: sticky;
-  display: block;
-  font-family: "K2D-Regular";
-}
-
-nav ul {
-  display: none;
-  list-style-type: none;
-}
-
-.hamburger-menu ul.submenu {
-  display: none;
-  flex-direction: column;
-  padding: var(--spacing-small);
-}
-
-/* ----- Navlink ----*/
-nav a{
-  color:#fff;
-}
-
-a:link {
-  text-decoration: none;
-}
-
-a:hover {
-  background-color: transparent;
-  text-decoration: underline;
-}
-
 
 main {
   height: 85vh;
@@ -208,9 +176,4 @@ footer a {
   text-decoration: none;
 }
 
-@media screen and (min-width: 991px) {
-}
 
-h1 {
-  font-family: 'K2D', sans-serif;
-}

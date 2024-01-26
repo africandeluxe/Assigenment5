@@ -153,7 +153,8 @@ $(() => {
         <p class="company-role"> We are looking for a ${company.role} </p>
         <p class="company-location"> Location ${company.location} </p>  
         <p class="company-fulltime"> Full-time: ${company.fulltime} </p> 
-        <p class="company-description"> ${company.description} </p> 
+        <p class="company-description"> ${company.description} </p>
+        <button class="read-more">View Profile</button>
         </div> 
       </div>
     `);
