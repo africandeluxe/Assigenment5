@@ -165,15 +165,18 @@ $(() => {
   
 let filterReset=true;
 
-const filterMainFunction = (className, filterCategory, filterSpecificValue) => {  
-  let filteredAnnouncements = ourCompanies.filter((company)=> {
-    return company[filterCategory]=== filterSpecificValue;
-  })
+const filterMainFunction = (className, filterCategory, filterSpecificValue) => {
   $(className).on("click", () => {
     $(".main-content").empty();
-    showCompanyInfo(filteredAnnouncements);
-    console.log(filteredAnnouncements);
+    let filteredAnnouncements = ourCompanies.filter((company)=> {
+      return company[filterCategory]=== filterSpecificValue;
   })
+  showCompanyInfo(filteredAnnouncements);
+
+  
+  })
+  
+  
 }
   //fulltime
   filterMainFunction(".fulltime-true", "fulltime", "Yes");
