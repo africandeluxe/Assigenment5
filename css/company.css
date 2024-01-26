@@ -208,6 +208,28 @@ footer a {
   text-decoration: none;
 }
 
+/*---- FOOTER ---*/
+
+.footer-content h3 {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 48px;
+  height: 100px;
+}
+
+.footer-content p {
+  margin: 20px;
+
+}
+.footer-bottom p {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+
 @media screen and (min-width: 991px) {
 }
 
