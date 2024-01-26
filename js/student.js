@@ -163,15 +163,16 @@ $(() => {
   showCompanyInfo(ourCompanies);
 
   
-let isFilterReset=false;
+let filterReset=true;
 
 const filterMainFunction = (className, filterCategory, filterSpecificValue) => {  
-  let filteredAnnouncements = ourCompanies.filter((company)=> {//try with map????-Davide//168-171 per skistemare
+  let filteredAnnouncements = ourCompanies.filter((company)=> {
     return company[filterCategory]=== filterSpecificValue;
   })
   $(className).on("click", () => {
     $(".main-content").empty();
     showCompanyInfo(filteredAnnouncements);
+    console.log(filteredAnnouncements);
   })
 }
   //fulltime
@@ -193,7 +194,8 @@ const filterMainFunction = (className, filterCategory, filterSpecificValue) => {
   const resetFilters = () => {
     $(".resetbtn").on("click", () => {
       $(".main-content").empty();
-      isFilterReset=true;//invertire filterReset=false
+      filterReset=true;
+      ourCompanies = [Company1, Company2, Company3, Company4, Company5, Company6, Company7, Company8, Company9, Company10];
       showCompanyInfo(ourCompanies);
     });
   };
