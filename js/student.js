@@ -169,9 +169,9 @@ $(() => {
           <div class="modal-body">
           <h3>${company.role}</h3>
             </br>
-            <p>Requirements: ${company.requirements}</p>
+            <p class="pop-up-content">Requirements: ${company.requirements}</p>
             </br>
-            <p>Bonus: ${company.bonus}</p>
+            <p class="pop-up-content">Bonus: ${company.bonus}</p>
           </div>
         </div>
         <div class="active" id="overlay"></div>
