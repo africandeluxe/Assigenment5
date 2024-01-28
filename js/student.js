@@ -154,7 +154,7 @@ $(() => {
         <p class="company-location"> Location ${company.location} </p>  
         <p class="company-fulltime"> Full-time: ${company.fulltime} </p> 
         <p class="company-description"> ${company.description} </p>
-        <button class="read-more">View Profile</button>
+        <button class="read-more">Read more</button>
         </div> 
       </div>
     `)

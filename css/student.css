@@ -241,6 +241,17 @@ button a {
   padding: 1.2rem;
 }
 
+button.read-more {
+  cursor: pointer;
+  border: 3px solid white;
+  border-radius: 16px;
+
+}
+button.read-more:hover {
+  background: var(--primary-profile-background-color);
+  color: black;
+
+}
 /* ---- Footer ----*/
 
 footer {
