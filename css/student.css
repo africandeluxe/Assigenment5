@@ -204,6 +204,7 @@ p {
   background: none;
   font-size: 1.75rem;
   font-weight: bold;
+  margin-top: 36px;
   transform: translate(20%, -100%);
 }
 
