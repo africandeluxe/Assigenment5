@@ -176,9 +176,9 @@ button {
 }
 
 button a {
-  text-decoration: none;
   color: var(--primary-text-color);
   padding: 1.2rem;
+  text-decoration: none;
 }
 
 button.read-more {
@@ -198,14 +198,13 @@ button.read-more:hover {
 /* ---- Footer ----*/
 
 footer {
-  background: var(--primary-gradient-background);
-  text-decoration: none;
+  background-color: black;
   border-top: 1px solid #dee2e6;
   color: var(--primary-text-color);
-  text-align: center;
-  padding: 24px;
   max-height: 15%;
-  background-color: black;
+  padding: 24px;
+  text-align: center;
+  text-decoration: none;
 }
 
 footer a {
@@ -215,9 +214,9 @@ footer a {
 .footer-content h3 {
   font-size: 24px;
   font-weight: 400;
-  text-transform: capitalize;
   line-height: 48px;
   height: 100px;
+  text-transform: capitalize;
 }
 
 .footer-content p {
@@ -226,9 +225,9 @@ footer a {
 }
 .footer-bottom p {
   font-size: 14px;
-  word-spacing: 2px;
-  text-align: center;
   margin: 10px auto;
+  text-align: center;
+  word-spacing: 2px;
 }
 
 
@@ -237,12 +236,11 @@ footer a {
 .fulltimebtn,
 .resetbtn {
   background-color: #3498db;
-  color: white;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
   border: 2px solid #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
   padding: 12px 12px;
 }
 
@@ -250,7 +248,7 @@ footer a {
 .rolebtn:hover,
 .locationbtn:focus,
 .rolebtn:focus,
-.fulltimebtn:focus,
+.fulltimebtn:hover,
 .fulltimebtn:focus {
   background-color: #2980b9;
 }
@@ -268,26 +266,26 @@ footer a {
 }
 /* The container <div> - needed to position the dropdown content */
 .dropdown-filter {
-  position: relative;
   display: inline-block;
+  position: relative;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .filters-dropdown {
-  display: none;
-  position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  display: none;
+  min-width: 160px;
+  position: absolute;
   z-index: 1;
 }
 
 /* Links inside the dropdown */
 .filters-dropdown a {
   color: black;
+  display: block;
   padding: 12px 16px;
   text-decoration: none;
-  display: block;
 }
 
 /* Change color of dropdown links on hover */
