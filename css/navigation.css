@@ -13,9 +13,9 @@
 
  
 header {
+    border-bottom: 1px solid #fff;
     color: var(--primary-text-color);
     display: flex;
-    grid-template-columns: 1fr 1.2fr 0.5fr;
     justify-content: space-between;
     margin:0;
     padding: var(--spacing-small);
