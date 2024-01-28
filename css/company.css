@@ -47,6 +47,8 @@ section {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+  min-width: 79vw;
 }
 
 
@@ -204,7 +206,6 @@ p {
   height: 75%;
   width: 500px;
   max-width: 80%;
-  overflow: scroll;
 }
 
 .modal.active {
@@ -318,5 +319,39 @@ footer a {
   margin: 10px auto;
 }
 
+@media screen and (min-width: 860px){
+    
+    main {
+        display: flex;    
+    }
+    .filter-content {
+        flex-direction: column;
+        width: 30rem;
+    
+    }
 
+    .profile {
+        width: 23%;
+        height: 25%;
+        margin: 10px;
+        flex-wrap: wrap;
+    }
+    .select {
+        width: 15rem;
+        margin: 24px 0 0 10px;
+    }
+    .menu {
+        position: static ;
+        width: 15rem;
+        margin: 12px 0 0 10px;
+    }
+
+    .modal {
+        width: 80%;
+    }
+
+    .filter-content {
+        justify-content: unset;
+    }
+}
 
