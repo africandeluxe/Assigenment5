@@ -20,8 +20,8 @@ html {
 }
 
 /* ----- NAVBAR ----*/
-nav a{
-  color:#fff;
+nav a {
+  color: #fff;
 }
 
 a:link {
@@ -32,9 +32,6 @@ a:hover {
   background-color: transparent;
   text-decoration: underline;
 }
-
-
-
 
 body {
   display: flex;
@@ -259,7 +256,6 @@ body section.slideshow .detail .detail-item.active {
 }
 
 @media screen and (min-width: 991px) {
-
   button {
     font-family: var(--primary-font-family);
   }

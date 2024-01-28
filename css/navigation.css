@@ -1,11 +1,9 @@
 :root {
   --primary-text-color: #eee;
   --background-color: linear-gradient(0deg, rgb(6, 5, 21) 50%, rgb(86, 0, 167) 120%);
-
   --primary-font-family: "K2D-Regular";
   --secondary-font-family: "K2D-SemiBold";
   --boldest-font-family: "K2D-Bold";
-
   --spacing-small: 8px;
   --spacing-main: 16px;
   --spacing-large: 36px;
@@ -32,6 +30,7 @@ nav ul {
   padding: var(--spacing-small);
   position: absolute;
 }
+
 .submenu {
   position: absolute;
   left: 100%;
@@ -63,6 +62,11 @@ nav ul {
 .submenu li {
   padding-left: var(--spacing-main);
 }
+
+.submenu li:hover {
+  background-color: rgba(255, 255, 255, 0.676);
+}
+
 .hamburger-menu {
   height: 50px;
   width: 50px;
@@ -97,6 +101,62 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Display arrow only for items with the "with-arrow" class */
+nav ul > li.with-arrow::before {
+  content: "▶";
+  margin-left: 5px;
+  z-index: 12;
+}
+
+/* Remove arrow for items without children */
+nav ul > li:not(.with-arrow) {
+  position: relative;
+}
+
+/* Remove arrow for last children */
+nav ul > li:not(.with-arrow) > ul li:last-child::before {
+  content: none;
+}
+.submenu,
+.submenu-2,
+.submenu-3 {
+  padding: var(--spacing-small) 0;
+}
+
+/* Adjust padding for submenu items */
+.submenu li,
+.submenu-2 li,
+.submenu-3 li {
+  padding: var(--spacing-small) var(--spacing-main);
+}
+
+.submenu li:hover,
+.submenu-2 li:hover,
+.submenu-3 li:hover {
+  background-color: rgba(255, 255, 255, 0.676);
+}
+
+nav ul > li::before,
+.submenu li::before,
+.submenu-2 li::before,
+.submenu-3 li::before {
+  white-space: nowrap;
+}
+
+.submenu,
+.submenu-2,
+.submenu-3 {
+  padding: var(--spacing-small) 0;
+}
+
+.submenu li,
+.submenu-2 li,
+.submenu-3 li {
+  padding: var(--spacing-small) var(--spacing-main);
+  min-width: 160px;
+}
+
+/* Media Query adjustments */
 @media screen and (min-width: 991px) {
   header {
     display: block;
@@ -125,6 +185,7 @@ a:hover {
     padding: var(--spacing-small) var(--spacing-main);
     position: relative;
   }
+
   .submenu li {
     padding-left: none;
   }
@@ -137,18 +198,23 @@ a:hover {
     padding: var(--spacing-small);
   }
 
-  /*---- Navlinks---*/
-
-  nav a {
-    color: #fff;
+  .submenu li::before,
+  .submenu-2 li::before,
+  .submenu-3 li::before {
+    white-space: nowrap;
   }
 
-  a:link {
-    text-decoration: none;
+  .submenu li,
+  .submenu-2 li,
+  .submenu-3 li {
+    padding: var(--spacing-small) var(--spacing-main);
   }
 
-  a:hover {
-    background-color: transparent;
-    text-decoration: underline;
+  /* Remove arrow for items without children */
+  nav ul > li:not(.with-arrow):only-child::before,
+  .submenu li:not(.with-arrow):only-child::before,
+  .submenu-2 li:not(.with-arrow):only-child::before,
+  .submenu-3 li:not(.with-arrow):only-child::before {
+    content: none;
   }
 }
