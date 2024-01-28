@@ -40,7 +40,8 @@ header {
 
 main {
   height: 85vh;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 section {
   display: flex;
@@ -103,7 +104,6 @@ section {
 }
 
 .menu {
-  
     list-style: none;
     padding: 0.2rem 0.5rem;
     background: #323741;
@@ -112,8 +112,8 @@ section {
     border-radius: 5px;
     color: #9fa5b5;
     position: absolute;
-    top: 15.5%;
-    width: 30%;
+    top: 10px;
+    width: 8rem;
     opacity: 0;
     display: none;
     transition: 0.2s;
@@ -195,7 +195,7 @@ p {
   color: var(--primary-text-color);
   position: fixed;
   top: 10%;
-  left: 10%;
+
   transform: translate(-50%, -50%) scale(0);
 
   border-radius: 10px;
@@ -319,7 +319,16 @@ footer a {
   margin: 10px auto;
 }
 
-@media screen and (min-width: 860px){
+@media screen and (min-width: 800px) {
+    .profile {
+        width: 30%;
+        margin: 10px;
+        flex-wrap: wrap;
+    }
+    .od
+}
+
+@media screen and (min-width: 991px){
     
     main {
         display: flex;    
@@ -331,7 +340,7 @@ footer a {
     }
 
     .profile {
-        width: 23%;
+        width: 30%;
         height: 25%;
         margin: 10px;
         flex-wrap: wrap;
@@ -348,10 +357,28 @@ footer a {
 
     .modal {
         width: 80%;
+        left: 10%;
     }
 
     .filter-content {
         justify-content: unset;
+    }
+    .modal-header .close-button {
+        font-size: 4rem;
+        margin: 60px 20px 150px 0;
+    }
+    .modal-header .title {
+        font-size: 3.2rem ;
+        color: black;
+    }
+    .modal-body p {
+        font-size: 1.2rem;
+        color: black;
+    }
+    .modal-body h3 {
+        color: black;
+        font-size: 2rem;
+        margin-bottom: 20px;
     }
 }
 
