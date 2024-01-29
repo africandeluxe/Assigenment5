@@ -297,4 +297,15 @@ footer a {
 .show {
   display: block;
 }
-
+@media screen and (min-width: 800px) {
+  .modal.active {
+    left: 20%;
+  }
+  
+}
+@media screen and (min-width: 991px) {
+  .modal.active {
+    left: 30%;
+  }
+  
+}
