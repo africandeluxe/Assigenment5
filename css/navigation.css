@@ -1,6 +1,7 @@
 :root {
   --primary-text-color: #eee;
   --background-color: linear-gradient(0deg, rgb(6, 5, 21) 50%, rgb(86, 0, 167) 120%);
+  --overlay-color: #9c4bfe;
   --primary-font-family: "K2D-Regular";
   --secondary-font-family: "K2D-SemiBold";
   --boldest-font-family: "K2D-Bold";
@@ -51,8 +52,7 @@ nav ul {
 
 .submenu-3 {
   position: absolute;
-  top: 0;
-  left: 100%;
+  top: 150px;
   background-color: rgba(6, 5, 21, 0.9);
   padding: var(--spacing-small);
   display: none;
@@ -64,7 +64,7 @@ nav ul {
 }
 
 .submenu li:hover {
-  background-color: rgba(255, 255, 255, 0.676);
+  background-color: var(--overlay-color);
 }
 
 .hamburger-menu {
@@ -89,7 +89,7 @@ nav a {
 }
 
 nav ul li:hover {
-  background-color: rgba(255, 255, 255, 0.676);
+  background-color: var(--overlay-color);
 }
 
 a:link {
@@ -133,7 +133,7 @@ nav ul > li:not(.with-arrow) > ul li:last-child::before {
 .submenu li:hover,
 .submenu-2 li:hover,
 .submenu-3 li:hover {
-  background-color: rgba(255, 255, 255, 0.676);
+  background-color: var(--overlay-color);
 }
 
 nav ul > li::before,
@@ -152,8 +152,9 @@ nav ul > li::before,
 .submenu li,
 .submenu-2 li,
 .submenu-3 li {
-  padding: var(--spacing-small) var(--spacing-main);
-  min-width: 160px;
+  padding: var(--spacing-small);
+  max-width: 160px;
+  min-width: 140px;
 }
 
 /* Media Query adjustments */
