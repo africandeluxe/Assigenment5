@@ -342,47 +342,11 @@ $(() => {
   filterMainFunction('.los-angeles', 'location', 'Los Angeles');
   filterMainFunction('.new-york', 'location', 'New York');
 
-  //RESET FILTERS
-  // const resetFilters = () => {
-  //   $('.resetbtn').on('click', () => {
-  //     $('.company-content').empty();
-  //     showCompanyInfo(ourCompanies);
-  //   });
-  // };
-
-  // resetFilters();
-
-  // B U T T O N S
-  // const setupDropdown = (buttonId, divId) => {
-  //   $(document).ready(function () {
-  //     $(buttonId).on("click", function () {
-  //       $(divId).toggleClass("show");
-  //     });
-
-  //     // Close the dropdown menu if the user clicks outside of it
-  //     $(document).on("click", function (event) {
-  //       if (!$(event.target).closest(buttonId).length) {
-  //         $(divId).removeClass("show");
-  //       }
-  //     });
-  //   });
-  // };
+ 
 
   setupDropdown("#locationDropdownBtn", "#location");
   setupDropdown("#roleDropdownBtn", "#role");
   setupDropdown("#fulltimeDropdownBtn", "#fulltime");
 });
 
-// const profile= $(".main-content").append(`
-// <div class="company-container">
-//   <img class="company-img" src="${company.smallimg}" alt="${company.name}">
-//   <div class="company-text">
-//   <h2 class="company-title"> ${company.name} </h2>
-//   <p class="company-role"> We are looking for a ${company.role} </p>
-//   <p class="company-location"> Location ${company.location} </p>
-//   <p class="company-fulltime"> Full-time: ${company.fulltime} </p>
-//   <p class="company-description"> ${company.description} </p>
-//   <button class="read-more">Read more</button>
-//   </div>
-// </div>
-// `)
+
