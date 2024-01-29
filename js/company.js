@@ -285,16 +285,16 @@ $(() => {
   //fulltime
   filterMainFunction('.fulltime-true', 'fulltime', true);
   filterMainFunction('.fulltime-false', 'fulltime', false);
-  // filterMainFunction(".reset-btn", "fulltime", true, false)
+  
   //Roles
   filterMainFunction('.back-end', 'title', 'Back End Developer');
   filterMainFunction('.front-end', 'title', 'Front End Developer');
   filterMainFunction('.app-dev', 'title', 'App Developer');
   filterMainFunction('.full-stack', 'title', 'Full Stack Developer');
-  // filterMainFunction(".reset-btn", "title", "Back End Developer","Front End Developer", "App Developer", "Full Stack Developer")
+
   //Location
   filterMainFunction('.stockholm', 'location', 'Stockholm');
   filterMainFunction('.rome', 'location', 'Rome');
   filterMainFunction('.paris', 'location', 'Paris');
-  // filterMainFunction(".reset-btn","location", "Stockholm", "Rome", "Paris")
+ 
 });
