@@ -140,12 +140,12 @@ $(() => {
     "bluebios_big.jpg"
   );
 
-  let ourCompanies = [Company1, Company2, Company3, Company4, Company5, Company6, Company7, Company8, Company9, Company10];
+  let ourCompanies = [Company1, Company2, Company3, Company4, Company5, Company6, Company7, Company8, Company9, Company10];//inserire in reset per ripristinare????
 
   const showCompanyInfo = (companies) => {
-    
+    const companyContent = $('.main-content').empty();
     companies.forEach((company) => {
-      $(".main-content").append(`
+      const profile= $(".main-content").append(`
       <div class="company-container">
         <img class="company-img" src="${company.smallimg}" alt="${company.name}">
         <div class="company-text">  
@@ -153,165 +153,59 @@ $(() => {
         <p class="company-role"> We are looking for a ${company.role} </p>
         <p class="company-location"> Location ${company.location} </p>  
         <p class="company-fulltime"> Full-time: ${company.fulltime} </p> 
-        <p class="company-description"> ${company.description} </p> 
+        <p class="company-description"> ${company.description} </p>
+        <button class="read-more">Read more</button>
         </div> 
       </div>
-    `);
+    `)
+    $(".main-content").find('.read-more').on('click', () => {
+      const modalContent = $(`
+        <div class="modal" id="modal">
+          <div class="modal-header">
+          <img class="company-img" src="${company.smallimg}" alt="${company.name}">
+            <div class="title">${company.name} </div>
+            <button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+          <h3>${company.role}</h3>
+            </br>
+            <p class="pop-up-content">Requirements: ${company.requirements}</p>
+            </br>
+            <p class="pop-up-content">Bonus: ${company.bonus}</p>
+          </div>
+        </div>
+        <div class="active" id="overlay"></div>
+      `);
+
+      modalContent.find('.close-button, #overlay').on('click', () => {
+        modalContent.removeClass('active');
+        $('#overlay').removeClass('active');
+        showCompanyInfo(ourCompanies);
+      });
+
+      companyContent.empty().append(modalContent);
+      modalContent.addClass('active');
+      $('#overlay').addClass('active');
+    });
+
+    companyContent.append(profile);
+
     });
   };
 
   showCompanyInfo(ourCompanies);
 
-  // F I L T E R S -_______-; Q(0.0)Q
 
-  /*FULLTIME FILTER
-  let fulltimeYes = ourCompanies.filter((company) => {
-    return company.fulltime === "Yes";
-  });
-
-  const fulltimeYesClick = () => {
-    $(".fulltime-true").on("click", () => {
-      $(".main-content").empty();
-      showCompanyInfo(fulltimeYes);
-    });
-  };
-
-  let fulltimeNo = ourCompanies.filter((company) => {
-    return company.fulltime === "No";
-  });
-
-  const fulltimeNoClick = () => {
-    $(".fulltime-false").on("click", () => {
-      $(".main-content").empty();
-      showCompanyInfo(fulltimeNo);
-    });
-  };
-
-  fulltimeYesClick();
-  fulltimeNoClick();
-*/
-  /*ROLE FILTERS
-  let seniorSoftware = ourCompanies.filter((company) => {
-    return company.role === "Senior Software Developer";
-  });
-
-  const seniorSoftwareClick = () => {
-    $(".senior-software").on("click", () => {
-      $(".main-content").empty();
-      showCompanyInfo(seniorSoftware);
-    });
-  };
-
-  let frontendDeveloper = ourCompanies.filter((company) => {
-    return company.role === "Frontend Developer";
-  });
-
-  const frontendDeveloperClick = () => {
-    $(".frontend-developer").on("click", () => {
-      $(".main-content").empty();
-      showCompanyInfo(frontendDeveloper);
-    });
-  };
-
-  let uxDesign = ourCompanies.filter((company) => {
-    return company.role === "UX/UI Designer";
-  });
-
-  const uxDesignClick = () => {
-    $(".ux-design").on("click", () => {
-      $(".main-content").empty();
-      showCompanyInfo(uxDesign);
-    });
-  };
-
-  let dataScientist = ourCompanies.filter((company) => {
-    return company.role === "Data Scientist";
-  });
-
-  const dataScientistClick = () => {
-    $(".data-scientist").on("click", () => {
-      $(".main-content").empty();
-      showCompanyInfo(dataScientist);
-    });
-  };
-
-  seniorSoftwareClick();
-  frontendDeveloperClick();
-  uxDesignClick();
-  dataScientistClick();
-  */
-
-  /* LOCATION FILTERS
-  let cityStockholm = ourCompanies.filter((company) => {
-    return company.location === "Stockholm";
-  });
-/
-  const cityStockholmClick = () => {
-    $(".stockholm").on("click", () => {
-      $(".main-content").empty();
-      showCompanyInfo(cityStockholm);
-    });
-  };
-
-  let cityRome = ourCompanies.filter((company) => {
-    return company.location === "Rome";
-  });
-
-  const cityRomeClick = () => {
-    $(".rome").on("click", () => {
-      $(".main-content").empty();
-      showCompanyInfo(cityRome);
-    });
-  };
-
-  let cityParis = ourCompanies.filter((company) => {
-    return company.location === "Paris";
-  });
-
-  const cityParisClick = () => {
-    $(".paris").on("click", () => {
-      $(".main-content").empty();
-      showCompanyInfo(cityParis);
-    });
-  };
-
-  let cityNewYork = ourCompanies.filter((company) => {
-    return company.location === "New York";
-  });
-
-  const cityNewYorkClick = () => {
-    $(".new-york").on("click", () => {
-      $(".main-content").empty();
-      showCompanyInfo(cityNewYork);
-    });
-  };
-
-  let cityLosAngeles = ourCompanies.filter((company) => {
-    return company.location === "Los Angeles";
-  });
-  const cityLosAngelesClick = () => {
-    $(".los-angeles").on("click", () => {
-      $(".main-content").empty();
-      showCompanyInfo(cityLosAngeles);
-    });
-  };*/
-   //cityStockholmClick();
-  //cityRomeClick();
-  //cityParisClick();
-  //cityNewYorkClick();
-  //cityLosAngelesClick();
-//Davide main function
-let isFilterReset=false;
-
-const filterMainFunction = (className, filterCategory, filterSpecificValue) => {  
-  let filteredAnnouncements = ourCompanies.filter((company)=> {
-    return company[filterCategory]=== filterSpecificValue;
-  })
+const filterMainFunction = (className, filterCategory, filterSpecificValue) => {//ex .profile , fulltime, true
   $(className).on("click", () => {
     $(".main-content").empty();
-    showCompanyInfo(filteredAnnouncements);
+    let filteredAnnouncements = ourCompanies.filter((company)=> {
+      return company[filterCategory]=== filterSpecificValue;
+    })
+  showCompanyInfo(filteredAnnouncements);
   })
 }
+
   //fulltime
   filterMainFunction(".fulltime-true", "fulltime", "Yes");
   filterMainFunction(".fulltime-false", "fulltime", "No");
@@ -331,7 +225,6 @@ const filterMainFunction = (className, filterCategory, filterSpecificValue) => {
   const resetFilters = () => {
     $(".resetbtn").on("click", () => {
       $(".main-content").empty();
-      isFilterReset=true;
       showCompanyInfo(ourCompanies);
     });
   };

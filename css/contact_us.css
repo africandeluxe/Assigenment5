@@ -199,6 +199,8 @@ input[type="text"] {
   padding: var(--spacing-small);
 }
 
+/* ----- FOOTER -----*/
+
 footer {
   background: var(--primary-gradient-background);
   border-top: 1px solid #dee2e6;
@@ -208,12 +210,14 @@ footer {
   padding: var(--spacing-large);
   text-align: center;
   text-decoration: none;
+  background-color: black;
 }
 
 footer a {
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 @media screen and (min-width: 991px) {
   h1 {
     font-size: 4rem;
@@ -223,6 +227,29 @@ footer a {
     height: auto;
     border-radius: 30px;
   }
+=======
+.footer-content h3 {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 48px;
+  height: 100px;
+}
+
+.footer-content p {
+  margin: 20px;
+
+}
+.footer-bottom p {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+
+@media screen and (min-width: 600px) {
+>>>>>>> footer
   fieldset {
     border: 4px solid white;
     margin: 24px 72px;

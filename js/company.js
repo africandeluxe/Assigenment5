@@ -34,7 +34,7 @@ $(() => {
     'Bärk',
     'Front End Developer',
     'Stockholm',
-    true,
+    false,
     "I've always liked web design in some form since childhood, but I didn't start pursuing an education of it until 2011 when I chose a graphic design course in high school. I coded a few rudimentory websites to get some experience in web design. After working in service, I decided to pursue Web Design and started studying Interaction Design at university. After finishing my studies with a bachelor's degree and working as a UI/UX designer, I started to get more and more used to coding and its many challenges, and thus felt that this truly can be the career I was meant for.",
     'During this internship I was given more responsibility in projects which involved direct communication with clients, working together in a team with people in different roles and coding challenging designs'
   );
@@ -174,4 +174,127 @@ $(() => {
   };
 
   showStudentInfo(arrayStudentObject);
+
+  //Filter
+
+  const filterStractur = $('main').prepend(`
+  <div class="filter-content">
+            <div class="dropdown filter">
+                <div class="select">
+                    <span class="selected">Location</span>
+                    <div class="caret"></div>
+                </div>
+                <ul class="menu">
+                    <li class="reset-btn">All</li>
+                    <li class="stockholm">Stockholm</li>
+                    <li class="paris">Paris</li>
+                    <li class="rome">Rome</li>
+                </ul>
+            </div>
+            <div class="dropdown filter">
+                <div class="select">
+                    <span class="selected">Role</span>
+                    <div class="caret"></div>
+                </div>
+                <ul class="menu">
+                    <li class="reset-btn">All</li>
+                    <li class="front-end">Front-End developer</li>
+                    <li class="back-end">Back-End Developer</li>
+                    <li class="app-dev">App Developer</li>
+                    <li class="full-stack">Full Stack Developer</li>
+                </ul>
+            </div>
+            <div class="dropdown filter">
+                <div class="select">
+                    <span class="selected">Full-/part Time</span>
+                    <div class="caret"></div>
+                </div>
+                <ul class="menu">
+                    <li class="reset-btn">All</li>
+                    <li class="fulltime-true">Yes</li>
+                    <li class="fulltime-false">No</li>
+                </ul>
+            </div>
+        </div>
+  `);
+
+  const dropdowns = $('.dropdown');
+
+  dropdowns.each((index, dropdown) => {
+    const select = $(dropdown).find('.select');
+    const caret = $(dropdown).find('.caret');
+    const menu = $(dropdown).find('.menu');
+    const options = $(dropdown).find('.menu li');
+    const selected = $(dropdown).find('.selected');
+
+    select.on('click', () => {
+      menu.toggleClass('menu-open');
+      select.toggleClass('select-clicked');
+      caret.toggleClass('caret-rotate');
+    });
+
+    options.on('click', event => {
+      const option = $(event.currentTarget);
+      selected.text(option.text());
+      select.removeClass('select-clicked');
+      caret.removeClass('caret-rotate');
+      menu.removeClass('menu-open');
+
+      options.removeClass('active');
+      option.addClass('active');
+    });
+  });
+
+  const filterMainFunction = (
+    className,
+    filterCategory,
+    filterSpecificValue
+  ) => {
+    //ex .profile , fulltime, true
+    $(className).on('click', () => {
+      $('.main-content').empty();
+      let filteredAnnouncements = arrayStudentObject.filter(students => {
+        return students[filterCategory] === filterSpecificValue;
+      });
+      showStudentInfo(filteredAnnouncements);
+    });
+  };
+
+  const dropdownsOriginal = $('.dropdown');
+
+  // Function to initialize the original text content by clicking on All(.reset-btn)
+  const initOriginalTextContent = () => {
+    dropdownsOriginal.each((index, dropdown) => {
+      const select = $(dropdown).find('.select');
+      select.data('originalText', select.find('.selected').text());
+    });
+  };
+
+  initOriginalTextContent();
+
+  const resetFilterBtn = $('.reset-btn').on('click', event => {
+    showStudentInfo(arrayStudentObject);
+
+    const resetButton = $(event.currentTarget);
+    const dropdown = resetButton.closest('.dropdown');
+    const select = dropdown.find('.select');
+
+    select.find('.selected').text(select.data('originalText'));
+  });
+
+  //fulltime
+  filterMainFunction('.fulltime-true', 'fulltime', true);
+  filterMainFunction('.fulltime-false', 'fulltime', false);
+  // filterMainFunction(".reset-btn", "fulltime", true, false)
+  //Roles
+  filterMainFunction('.back-end', 'title', 'Back End Developer');
+  filterMainFunction('.front-end', 'title', 'Front End Developer');
+  filterMainFunction('.app-dev', 'title', 'App Developer');
+  filterMainFunction('.full-stack', 'title', 'Full Stack Developer');
+  // filterMainFunction(".reset-btn", "title", "Back End Developer","Front End Developer", "App Developer", "Full Stack Developer")
+  //Location
+  filterMainFunction('.stockholm', 'location', 'Stockholm');
+  filterMainFunction('.rome', 'location', 'Rome');
+  filterMainFunction('.paris', 'location', 'Paris');
+  // filterMainFunction(".reset-btn","location", "Stockholm", "Rome", "Paris")
 });
