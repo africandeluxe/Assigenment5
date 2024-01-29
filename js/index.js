@@ -117,8 +117,8 @@ $(() => {
       }
 
       // click/hover on items
-      navigationItem.on("mouseenter", setTweenValues);
       navigationItem.on("click", function () {
+        setTweenValues.call(this); // Set tween values on click
         doTween($(this));
       });
 

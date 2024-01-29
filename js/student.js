@@ -206,20 +206,7 @@ const filterMainFunction = (className, filterCategory, filterSpecificValue) => {
   })
 }
 
-  //fulltime
-  filterMainFunction(".fulltime-true", "fulltime", "Yes");
-  filterMainFunction(".fulltime-false", "fulltime", "No");
-  //Roles
-  filterMainFunction(".senior-software", "role", "Senior Software Developer");
-  filterMainFunction(".frontend-developer", "role", "Frontend Developer");
-  filterMainFunction(".ux-design", "role", "UX/UI Designer");
-  filterMainFunction(".data-scientist", "role", "Data Scientist");
-  //Location
-  filterMainFunction(".stockholm", "location", "Stockholm");
-  filterMainFunction(".rome", "location", "Rome");
-  filterMainFunction(".paris", "location", "Paris");
-  filterMainFunction(".los-angeles", "location", "Los Angeles");
-  filterMainFunction(".new-york", "location", "New York");
+  
   
   // RESET FILTERS
   const resetFilters = () => {
@@ -250,4 +237,19 @@ const filterMainFunction = (className, filterCategory, filterSpecificValue) => {
   setupDropdown("#locationDropdownBtn", "#location");
   setupDropdown("#roleDropdownBtn", "#role");
   setupDropdown("#fulltimeDropdownBtn", "#fulltime");
+
+  //fulltime
+  filterMainFunction(".fulltime-true", "fulltime", "Yes");
+  filterMainFunction(".fulltime-false", "fulltime", "No");
+  //Roles
+  filterMainFunction(".senior-software", "role", "Senior Software Developer");
+  filterMainFunction(".frontend-developer", "role", "Frontend Developer");
+  filterMainFunction(".ux-design", "role", "UX/UI Designer");
+  filterMainFunction(".data-scientist", "role", "Data Scientist");
+  //Location
+  filterMainFunction(".stockholm", "location", "Stockholm");
+  filterMainFunction(".rome", "location", "Rome");
+  filterMainFunction(".paris", "location", "Paris");
+  filterMainFunction(".los-angeles", "location", "Los Angeles");
+  filterMainFunction(".new-york", "location", "New York");
 });
