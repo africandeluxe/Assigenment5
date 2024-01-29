@@ -112,7 +112,7 @@ section {
     border-radius: 5px;
     color: #9fa5b5;
     position: absolute;
-    top: 10px;
+    top: 138px;
     width: 8rem;
     opacity: 0;
     display: none;
@@ -325,7 +325,7 @@ footer a {
         margin: 10px;
         flex-wrap: wrap;
     }
-    .od
+    
 }
 
 @media screen and (min-width: 991px){
@@ -380,5 +380,4 @@ footer a {
         font-size: 2rem;
         margin-bottom: 20px;
     }
-}
-
+};
