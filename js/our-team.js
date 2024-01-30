@@ -20,7 +20,7 @@ $(() => {
     "Operation Manager",
     "Paris",
     "edwin@changemaker.com",
-    "innovatetech_big.jpg"
+    "./../img/our-team/brad2.png"
     )
 
     let davide_object = new Staff(
@@ -28,7 +28,7 @@ $(() => {
     "Operation Manager",
     "Rome",
     "davide@changemaker.com",
-    "innovatetech_big.jpg"
+    "./../img/our-team/mario.png"
     )
 
     let diyako_object = new Staff(
@@ -36,7 +36,7 @@ $(() => {
     "Operation Manager",
     "Stockholm",
     "diyako@changemaker.com",
-    "innovatetech_big.jpg"
+    "./../img/our-team/brad.png"
     )
 
     let robel_object = new Staff(
@@ -44,7 +44,7 @@ $(() => {
     "Operation Manager",
     "Stockholm",
     "robel@changemaker.com",
-    "innovatetech_big.jpg"
+    "./../img/our-team/will.png"
     )
 
     let staff = davide_object;
