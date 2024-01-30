@@ -98,39 +98,19 @@ footer a {
 @media screen and (min-width: 600px) {
   .staff-img {
     border: 3px solid plum;
-    height: 150px;
+    height: 200px;
     margin: 24px;
     width: auto;
-  }
-
-  .staff-text,
-  .staff-role,
-  .staff-email,
-  .staff-location {
-    margin: 12px;
-  }
-
-  .map {
-    margin-bottom: 24px;
   }
 } 
   
 @media screen and (min-width: 991px) {
   .staff-img {
     border: 3px solid plum;
-    height: 150px;
+    height: 250px;
     margin: 24px;
     width: auto;
   }
 
-  .staff-text,
-  .staff-role,
-  .staff-email,
-  .staff-location {
-    margin: 12px;
-  }
-
-  .map {
-    margin-bottom: 24px;
-  }
+  
 } 
