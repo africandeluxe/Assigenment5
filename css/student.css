@@ -30,6 +30,7 @@ header {
     border-bottom: 1px solid #fff;
   }
 
+ 
 .select {
     background: #141619;
     color: var(--primary-text-color);
@@ -195,12 +196,10 @@ h3 {
   max-width: 80%;
   overflow: scroll;
   position: fixed;
-
   top: 10%;
   left: 10%;
-
   transform: translate(-50%, -50%) scale(0);
-  width: 500px;
+  width: 80%;
   z-index: 100;
 }
 
@@ -225,6 +224,7 @@ h3 {
 .modal-header .title {
   font-size: 1.25rem;
   font-weight: bold;
+  margin-left: 10px;
 }
 
 .modal-header .close-button {
