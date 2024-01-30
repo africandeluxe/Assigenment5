@@ -3,7 +3,6 @@ $(() => {
     this.name = name;
     this.role = role;
     this.location = location;
-    
     this.smallimg = smallimg;
   }
 
