@@ -8,8 +8,14 @@
   --spacing-small: 8px;
   --spacing-main: 16px;
   --spacing-large: 36px;
+  --submenu-width: calc((100% - (3 * 10px)) / 3);
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 header {
   color: var(--primary-text-color);
   display: flex;
@@ -38,6 +44,7 @@ nav ul {
   top: 0;
   display: none;
   z-index: 11;
+  margin-right: 10px;
 }
 
 .submenu-2 {
@@ -48,15 +55,18 @@ nav ul {
   padding: var(--spacing-small);
   display: none;
   z-index: 12;
+  margin-right: 10px;
 }
 
 .submenu-3 {
   position: absolute;
-  top: 150px;
+  top: 0;
+  left: 100%;
   background-color: rgba(6, 5, 21, 0.9);
   padding: var(--spacing-small);
   display: none;
   z-index: 13;
+  margin-right: 10px;
 }
 
 .hamburger-menu {
@@ -137,9 +147,10 @@ nav ul > li::before,
 .submenu li,
 .submenu-2 li,
 .submenu-3 li {
-  padding: var(--spacing-small);
   max-width: 160px;
-  min-width: 140px;
+  min-width: 110%;
+  margin: auto auto;
+  display: flex;
 }
 
 /* Media Query adjustments */
