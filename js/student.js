@@ -166,6 +166,7 @@ $(() => {
 
   const showCompanyInfo = companies => {
     const companyContent = $('.company-content').empty();
+  
     companies.forEach(company => {
       const profile = $(`
       <div class="company-container">
@@ -180,8 +181,7 @@ $(() => {
       </div>
     `);
 
-      $('.main-content')
-        .find('.read-more')
+      profile.find('.read-more')
         .on('click', () => {
           const modalContent = $(`
         <div class="modal" id="modal">
@@ -343,10 +343,6 @@ $(() => {
   filterMainFunction('.new-york', 'location', 'New York');
 
  
-
-  setupDropdown("#locationDropdownBtn", "#location");
-  setupDropdown("#roleDropdownBtn", "#role");
-  setupDropdown("#fulltimeDropdownBtn", "#fulltime");
 });
 
 
