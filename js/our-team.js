@@ -11,7 +11,6 @@ $(() => {
     "Miski Mohamed Ahmed",
     "Operation Manager",
     "Paris",
-    "./../img/companies-logo/InnovateTech Solutions-logos.jpeg",
     "miski@changemaker.com",
     "innovatetech_big.jpg"
     )
@@ -20,8 +19,7 @@ $(() => {
     "Edwin Andermyr",
     "Operation Manager",
     "Paris",
-    "./../img/companies-logo/InnovateTech Solutions-logos.jpeg",
-    "miski@changemaker.com",
+    "edwin@changemaker.com",
     "innovatetech_big.jpg"
     )
 
@@ -29,8 +27,7 @@ $(() => {
     "Davide Baldi",
     "Operation Manager",
     "Rome",
-    "./../img/companies-logo/InnovateTech Solutions-logos.jpeg",
-    "miski@changemaker.com",
+    "davide@changemaker.com",
     "innovatetech_big.jpg"
     )
 
@@ -38,8 +35,7 @@ $(() => {
     "Diyako Qadri",
     "Operation Manager",
     "Stockholm",
-    "./../img/companies-logo/InnovateTech Solutions-logos.jpeg",
-    "miski@changemaker.com",
+    "diyako@changemaker.com",
     "innovatetech_big.jpg"
     )
 
@@ -47,13 +43,10 @@ $(() => {
     "Robel Girmay",
     "Operation Manager",
     "Stockholm",
-    "./../img/companies-logo/InnovateTech Solutions-logos.jpeg",
-    "miski@changemaker.com",
+    "robel@changemaker.com",
     "innovatetech_big.jpg"
     )
 
-    
-  
     let staff = davide_object;
   
     const showStaffInfo = (staff) => {
@@ -73,7 +66,6 @@ $(() => {
   
       $(".about-me").append(profile);
   
-      ;
     };
     showStaffInfo(staff);
   
