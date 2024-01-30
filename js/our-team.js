@@ -54,32 +54,28 @@ $(() => {
 
     
   
-    let ourStaff = [davide_object];
+    let staff = davide_object;
   
-    const showStaffInfo = (Staff) => {
+    const showStaffInfo = (staff) => {
       const staffContent = $('.main-content').empty();
-      Staff.forEach((Staff) => {
+      
         const profile= $(".main-content").append(`
-        <div class="company-container">
-          <img class="company-img" src="${Staff1.smallimg}" alt="${Staff1.name}">
-          <div class="company-text">  
-          <h2 class="company-title"> ${Staff1.name} </h2> 
-          <p class="company-location"> Location ${Staff1.location} </p> 
+        <div class="staff-container">
+          <img class="staff-img" src="${staff.img}" alt="${staff.name}">
+          <h1 class="staff-text">${staff.name} </h1>  
+          <h2 class="staff-role"> ${staff.role} </h2>
+          <p class="staff-email"> Email: ${staff.email} </p> 
+          <p class="staff-location"> Location ${staff.location} </p> 
           </div> 
         </div>
       `)
-      $(".main-content").find('.read-more').on('click', () => {
-        
+      
   
-        
+      $(".about-me").append(profile);
   
-        
-      });
-  
-      companyContent.append(profile);
-  
-      });
+      ;
     };
+    showStaffInfo(staff);
   
     
   
