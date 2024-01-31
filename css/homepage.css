@@ -270,7 +270,7 @@ body section.slideshow .detail .detail-item .headline .letter {
   opacity: 0;
   visibility: hidden;
   color: #ffffff;
-  font-size: 30px;
+  font-size: 40px;
   line-height: 30px;
   font-weight: 900;
   font-kerning: none;
@@ -323,6 +323,10 @@ body section.slideshow .detail .detail-item.active {
   .button {
     display: flex;
     padding: 10px;
+  }
+
+  body section.slideshow .detail .detail-item .headline .letter {
+    font-size: 70px;
   }
 
   /* SLIDER CSS */
