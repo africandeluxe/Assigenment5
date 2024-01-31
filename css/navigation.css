@@ -188,6 +188,7 @@ nav ul > li::before,
     cursor: pointer;
     padding: var(--spacing-small) var(--spacing-main);
     position: relative;
+    border-radius: 15px;
   }
 
   .submenu li {
