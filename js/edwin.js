@@ -21,7 +21,7 @@ $(() => {
       "Operation Manager",
       "Paris",
       "edwin@changemaker.com",
-      "./../img/our-team/brad2.png",
+      "./../img/our-team/man.png",
       `<iframe class= "map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.6408307283114!2d2.329676976678452!3d48.88412317133567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e4eff6f0c89%3A0xf44e90af87482111!2sMoulin%20Rouge!5e0!3m2!1sit!2sse!4v1706616292265!5m2!1sit!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`
   
       )

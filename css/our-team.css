@@ -4,9 +4,6 @@
     --primary-font-family: "K2D-Regular";
     --secondary-font-family: "K2D-SemiBold";
     --boldest-font-family: "K2D-Bold";
-  
-    --spacing-small: 8px;
-    --spacing-main: 16px;
   }
   
   * {
@@ -21,7 +18,7 @@
   
   body {
     background: var(--background-color);
-    color: white;
+    color: var(--primary-text-color);
     display: flex;
     flex-direction: column;
     font-family: "K2D-Regular";
@@ -31,6 +28,7 @@
 
   main {
     align-items: center;
+    background: var(--background-color);
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -38,12 +36,13 @@
 
   .staff-container {
     align-items: center;
-    background: var(--background-color);
     display: flex;
     flex-direction: column;
   }
   .staff-img {
+    background-color: var(--primary-text-color);
     border: 3px solid plum;
+    border-radius: 16px;
     height: 150px;
     margin: 24px;
     width: auto;
