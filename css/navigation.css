@@ -92,6 +92,7 @@ nav a {
 
 nav ul li:hover {
   background-color: var(--overlay-color);
+  transition: 0.7s all;
 }
 
 a:link {
@@ -157,14 +158,20 @@ nav ul > li::before,
 @media screen and (min-width: 991px) {
   header {
     display: block;
-    margin-right: var(--spacing-large);
-    margin-left: var(--spacing-large);
+    margin: 0;
+    padding: 0;
   }
 
+  main {
+    min-height: auto;
+  }
   nav .hamburger-menu {
     display: none;
   }
 
+  .content {
+    padding: 15px;
+  }
   .logo-mobile {
     display: none;
   }
