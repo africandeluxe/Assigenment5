@@ -217,17 +217,6 @@ footer a {
   text-decoration: none;
 }
 
-<<<<<<< HEAD
-@media screen and (min-width: 991px) {
-  h1 {
-    font-size: 4rem;
-  }
-  .contact-img {
-    width: 650px;
-    height: auto;
-    border-radius: 30px;
-  }
-=======
 .footer-content h3 {
   font-size: 24px;
   font-weight: 400;
@@ -249,7 +238,6 @@ footer a {
 
 
 @media screen and (min-width: 600px) {
->>>>>>> footer
   fieldset {
     border: 4px solid white;
     margin: 24px 72px;
