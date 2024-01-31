@@ -41,7 +41,7 @@ $(() => {
     "Stockholm",
     "diyako@changemaker.com",
     "./../img/our-team/johnny.png",
-    `<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2036.259720179957!2d18.382925077276177!3d59.31191997460588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f81272f2b3189%3A0xf965281351a280db!2sNordic%20Wellness%20V%C3%A4rmd%C3%B6%20Gustavsbergsv%C3%A4gen!5e0!3m2!1sit!2sse!4v1706617257553!5m2!1sit!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`
+    `<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d891.6076430683419!2d18.426705057721826!3d59.31388095864911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46f57fd6efbfe5f7%3A0xb79287bfa3060d63!2zQ3Jvc3NmaXQgVsOkcm1kw7Y!5e0!3m2!1sen!2sse!4v1706699730934!5m2!1sen!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`
     )
 
     let robel_object = new Staff(
