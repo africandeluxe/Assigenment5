@@ -1,14 +1,17 @@
 :root {
   --primary-text-color: #eee;
   --background-color: linear-gradient(0deg, rgb(6, 5, 21) 50%, rgb(86, 0, 167) 120%);
+  --overlay-color: #9c4bfe;
+  --nav-color: rgba(6, 5, 21, 0.9);
+  --header-color: rgba(22, 19, 56, 0.712);
   --primary-font-family: "K2D-Regular";
   --secondary-font-family: "K2D-SemiBold";
   --boldest-font-family: "K2D-Bold";
-
   --spacing-small: 8px;
   --spacing-main: 16px;
+  --spacing-large: 36px;
+  --submenu-width: calc((100% - (3 * 10px)) / 3);
 }
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -84,7 +87,6 @@ footer {
   padding: 24px;
   max-height: 15%;
   background-color: black;
-
 }
 
 footer a {
@@ -101,7 +103,6 @@ footer a {
 
 .footer-content p {
   margin: 20px;
-
 }
 .footer-bottom p {
   font-size: 14px;
@@ -224,6 +225,7 @@ body section.slideshow .detail .detail-item .headline {
   box-sizing: border-box;
   z-index: 2;
   text-align: center;
+  font-family: var(--primary-font-family);
 }
 
 body section.slideshow .detail .detail-item .headline .letter {
