@@ -71,7 +71,6 @@ main {
 button {
   background: none;
   margin: 0 10px 0 10px;
-  padding: 10px;
   border-radius: 10px;
   font-family: var(--primary-font-family);
   font-size: 1.3rem;
@@ -79,9 +78,6 @@ button {
 }
 
 /* BUTTON EFFECT */
-.button {
-  display: flex;
-}
 
 .button button {
   position: relative;
@@ -323,6 +319,10 @@ body section.slideshow .detail .detail-item.active {
 @media screen and (min-width: 991px) {
   button {
     font-family: var(--primary-font-family);
+  }
+  .button {
+    display: flex;
+    padding: 10px;
   }
 
   /* SLIDER CSS */
