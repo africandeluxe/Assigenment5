@@ -60,11 +60,10 @@ nav li {
 .submenu-3 {
   position: absolute;
   top: 0;
-  left: 100%;
+  left: 99%;
   background-color: rgba(6, 5, 21, 0.9);
   display: none;
   z-index: 13;
-  margin-right: 10px;
 }
 
 ul.submenu,
@@ -114,6 +113,11 @@ nav ul > li.with-arrow::before {
   content: "▶";
   z-index: 12;
 }
+/* Display arrow only for items with the "with-arrow.active" class */
+nav ul > li.with-arrow.active::before {
+  content: "▼";
+  z-index: 12;
+}
 
 /* Remove arrow for items without children */
 nav ul > li:not(.with-arrow) {
@@ -135,6 +139,7 @@ nav ul > li:not(.with-arrow) > ul li:last-child::before {
 .submenu-2 li:hover,
 .submenu-3 li:hover {
   background-color: var(--overlay-color);
+  transition: 1.2s all;
 }
 
 nav ul > li::before,
