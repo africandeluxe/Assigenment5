@@ -172,6 +172,10 @@ nav ul > li::before,
     background-color: var(--nav-color);
   }
 
+  nav {
+    font-size: 1.2rem;
+  }
+
   main {
     min-height: auto;
   }
@@ -223,6 +227,7 @@ nav ul > li::before,
   .submenu-2 li,
   .submenu-3 li {
     padding: var(--spacing-small) var(--spacing-main);
+    border-radius: 15px;
   }
 
   /* Remove arrow for items without children */
