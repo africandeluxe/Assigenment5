@@ -19,6 +19,7 @@
   padding: 0;
 }
 header {
+  border-bottom: 1px solid #fff;
   color: var(--primary-text-color);
   display: flex;
   justify-content: space-between;
