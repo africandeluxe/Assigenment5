@@ -2,6 +2,8 @@
   --primary-text-color: #eee;
   --background-color: linear-gradient(0deg, rgb(6, 5, 21) 50%, rgb(86, 0, 167) 120%);
   --overlay-color: #9c4bfe;
+  --nav-color: rgba(6, 5, 21, 0.9);
+  --header-color: rgba(22, 19, 56, 0.712);
   --primary-font-family: "K2D-Regular";
   --secondary-font-family: "K2D-SemiBold";
   --boldest-font-family: "K2D-Bold";
@@ -34,7 +36,7 @@ nav ul {
   list-style-type: none;
   top: 110%;
   left: 0;
-  background-color: rgba(6, 5, 21, 0.9);
+  background-color: var(--nav-color);
   position: absolute;
 }
 
@@ -53,7 +55,7 @@ nav li {
   position: absolute;
   top: 0;
   left: 100%;
-  background-color: rgba(6, 5, 21, 0.9);
+  background-color: var(--nav-color);
   display: none;
   z-index: 12;
 }
@@ -61,11 +63,10 @@ nav li {
 .submenu-3 {
   position: absolute;
   top: 0;
-  left: 100%;
-  background-color: rgba(6, 5, 21, 0.9);
+  left: 99%;
+  background-color: var(--nav-color);
   display: none;
   z-index: 13;
-  margin-right: 10px;
 }
 
 ul.submenu,
@@ -109,10 +110,18 @@ a:hover {
   text-decoration: underline;
   transition: 1.5s all;
 }
+li.with-arrow {
+  transition: 2s all;
+}
 
 /* Display arrow only for items with the "with-arrow" class */
 nav ul > li.with-arrow::before {
   content: "▶";
+  z-index: 12;
+}
+/* Display arrow only for items with the "with-arrow.active" class */
+nav ul > li.with-arrow.active::before {
+  content: "▼";
   z-index: 12;
 }
 
@@ -136,6 +145,7 @@ nav ul > li:not(.with-arrow) > ul li:last-child::before {
 .submenu-2 li:hover,
 .submenu-3 li:hover {
   background-color: var(--overlay-color);
+  transition: 1.2s all;
 }
 
 nav ul > li::before,
@@ -158,7 +168,8 @@ nav ul > li::before,
   header {
     display: block;
     margin: 0;
-    padding: 0;
+    padding: 20px;
+    background-color: var(--nav-color);
   }
 
   main {
