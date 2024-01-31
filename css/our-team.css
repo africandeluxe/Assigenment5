@@ -38,6 +38,7 @@
 
   .staff-container {
     align-items: center;
+    background: var(--background-color);
     display: flex;
     flex-direction: column;
   }
