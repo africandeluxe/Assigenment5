@@ -119,6 +119,7 @@ main {
   color: white;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   min-height: 70vh;
   padding: 10px;
   overflow:auto;
