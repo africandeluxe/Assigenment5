@@ -62,6 +62,7 @@ main {
 
 .student,
 .company {
+    width: 12rem;
   transition: 1.2s all;
 }
 .student:hover,
@@ -88,7 +89,7 @@ button {
 .button a {
   text-decoration: none;
   color: var(--primary-text-color);
-  padding: 1.2rem;
+  padding: 1rem;
   position: relative;
   display: inline-block;
 }
@@ -328,4 +329,10 @@ body section.slideshow .detail .detail-item.active {
   body section.slideshow .detail .detail-item .headline .letter {
     font-size: 70px;
   }
+  .button a {
+    padding: 1.5rem;
+  }
+  .student,
+.company {
+    width: 15rem;}
 }
