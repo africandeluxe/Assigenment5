@@ -162,7 +162,7 @@ $(() => {
     Company8,
     Company9,
     Company10,
-  ]; //inserire in reset per ripristinare????
+  ];
 
   const showCompanyInfo = companies => {
     const companyContent = $('.company-content').empty();
@@ -296,7 +296,7 @@ $(() => {
     filterCategory,
     filterSpecificValue
   ) => {
-    //ex .profile , fulltime, true
+    
     $(className).on('click', () => {
       $('.company-content').empty();
       let filteredAnnouncements = ourCompanies.filter(company => {
