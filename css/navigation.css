@@ -84,6 +84,9 @@ ul.submenu-3 {
   height: 55px;
   width: 55px;
 }
+.logo-mobile.footer {
+  display: none;
+}
 
 /* ----- Navlink ----*/
 nav {
@@ -186,8 +189,11 @@ nav ul > li::before,
   .content {
     padding: 15px;
   }
-  .logo-mobile {
+  .logo-mobile.header {
     display: none;
+  }
+  .logo-mobile.footer {
+    display: inline-block;
   }
 
   nav > ul {
@@ -236,5 +242,36 @@ nav ul > li::before,
   .submenu-2 li:not(.with-arrow):only-child::before,
   .submenu-3 li:not(.with-arrow):only-child::before {
     content: none;
+  }
+
+  ul li a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+
+    position: relative;
+    display: inline-block;
+  }
+
+  ul li a:hover {
+    text-decoration: none;
+  }
+
+  ul li a.active {
+    text-decoration: none;
+  }
+
+  ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0px;
+    left: 0;
+    background-color: var(--primary-text-color);
+    transition: width 0.6s ease-in-out, left 0.6s ease-in-out;
+  }
+  ul li a:hover::before {
+    width: 80%;
+    left: 10%;
   }
 }
