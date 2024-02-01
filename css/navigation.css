@@ -84,6 +84,9 @@ ul.submenu-3 {
   height: 55px;
   width: 55px;
 }
+.logo-mobile.footer {
+  display: none;
+}
 
 /* ----- Navlink ----*/
 nav {
@@ -186,8 +189,11 @@ nav ul > li::before,
   .content {
     padding: 15px;
   }
-  .logo-mobile {
+  .logo-mobile.header {
     display: none;
+  }
+  .logo-mobile.footer {
+    display: inline-block;
   }
 
   nav > ul {
