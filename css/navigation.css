@@ -85,7 +85,6 @@ ul.submenu-3 {
   width: 55px;
 }
 
-
 /* ----- Navlink ----*/
 nav {
   font-family: "K2D-Regular";
@@ -162,6 +161,9 @@ nav ul > li::before,
   min-width: 90%;
   display: flex;
   padding: 5px;
+}
+.MIDDLE {
+  text-align: center;
 }
 
 /* Media Query adjustments */
