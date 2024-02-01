@@ -162,28 +162,29 @@ $(() => {
     Company8,
     Company9,
     Company10,
-  ]; //inserire in reset per ripristinare????
+  ];
 
   const showCompanyInfo = companies => {
     const companyContent = $('.company-content').empty();
-  
+
     companies.forEach(company => {
       const profile = $(`
       <div class="company-container">
-        <img class="company-img" src="${company.smallimg}" alt="${company.name}">
-        <div class="company-text">  
-        <h3 class="company-title"> ${company.name} </h3> 
-        <p class="company-role"> We are looking for a ${company.role} </p>
-        <p class="company-location"> Location ${company.location} </p>  
-        <p class="company-fulltime"> Full-time: ${company.fulltime} </p> 
-        <button class="read-more">Read more</button>
-        </div> 
+      <img class="company-img" src="${company.smallimg}" alt="${company.name}">
+         <div class="company-right-side">
+               <div class="company-text">  
+               <h3 class="company-title"> ${company.name} </h3> 
+               <p class="company-role"> ${company.role} </p>
+               <p class="company-location"> Location ${company.location} </p>  
+               <p class="company-fulltime"> Full-time: ${company.fulltime} </p> 
+              </div> 
+            <button class="read-more">Read more</button>
+         </div>
       </div>
     `);
 
-      profile.find('.read-more')
-        .on('click', () => {
-          const modalContent = $(`
+      profile.find('.read-more').on('click', () => {
+        const modalContent = $(`
         <div class="modal" id="modal">
           <div class="modal-header">
           <img class="company-img" src="${company.smallimg}" alt="${company.name}">
@@ -201,16 +202,16 @@ $(() => {
         <div class="active" id="overlay"></div>
       `);
 
-          modalContent.find('.close-button, #overlay').on('click', () => {
-            modalContent.removeClass('active');
-            $('#overlay').removeClass('active');
-            showCompanyInfo(ourCompanies);
-          });
-
-          companyContent.empty().append(modalContent);
-          modalContent.addClass('active');
-          $('#overlay').addClass('active');
+        modalContent.find('.close-button, #overlay').on('click', () => {
+          modalContent.removeClass('active');
+          $('#overlay').removeClass('active');
+          showCompanyInfo(ourCompanies);
         });
+
+        companyContent.empty().append(modalContent);
+        modalContent.addClass('active');
+        $('#overlay').addClass('active');
+      });
 
       companyContent.append(profile);
     });
@@ -295,7 +296,7 @@ $(() => {
     filterCategory,
     filterSpecificValue
   ) => {
-    //ex .profile , fulltime, true
+    
     $(className).on('click', () => {
       $('.company-content').empty();
       let filteredAnnouncements = ourCompanies.filter(company => {
@@ -341,8 +342,4 @@ $(() => {
   filterMainFunction('.paris', 'location', 'Paris');
   filterMainFunction('.los-angeles', 'location', 'Los Angeles');
   filterMainFunction('.new-york', 'location', 'New York');
-
- 
 });
-
-
