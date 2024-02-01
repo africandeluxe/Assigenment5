@@ -1,6 +1,5 @@
 $(() => {
-  // GENERAL TO ALL PAGES
-  //Hamburger menu 1st level/wokrks
+  //Hamburger menu 1st level
 
   const navMenu = () => {
     $("nav .hamburger-menu").on("click", (event) => $(event.target).next("ul").toggle());
@@ -12,7 +11,7 @@ $(() => {
         $(event.target).siblings().find(".submenu").hide("active");
       },
     });
-    //hamburger 2nd level-works
+    //hamburger 2nd level
     $(".submenu li").on("click", (event) => $(event.target).next("ul").toggle());
     $(".submenu li").on({
       click: (event) => {
@@ -20,7 +19,7 @@ $(() => {
         $(event.target).siblings().find(".submenu-2").hide("active");
       },
     });
-    //hamburger menu 3 level-works
+    //hamburger menu 3 level
     $(".submenu-2 li").on("click", (event) => $(event.target).next("ul").toggle());
     $(".submenu-2 li").on({
       click: (event) => {
