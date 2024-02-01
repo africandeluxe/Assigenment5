@@ -1,7 +1,8 @@
-/*---- From company.css ---*/
+:root {
+  --primary-text-color: #eee;
+}
 
 footer {
-  background: var(--primary-gradient-background);
   text-decoration: none;
   border-top: 1px solid #dee2e6;
   color: var(--primary-text-color);
@@ -49,117 +50,6 @@ footer a {
   text-align: center;
   margin: 10px auto;
 }
-
-/*---- From contact_us.css ---*/
-
-footer {
-  background: var(--primary-gradient-background);
-  border-top: 1px solid #dee2e6;
-  color: var(--primary-text-color);
-  max-height: 15%;
-  min-height: 82px;
-  padding: var(--spacing-large);
-  text-align: center;
-  text-decoration: none;
-  background-color: black;
-}
-
-footer a {
-  text-decoration: none;
-}
-
-.footer-content h3 {
-  font-size: 24px;
-  font-weight: 400;
-  text-transform: capitalize;
-  line-height: 48px;
-  height: 100px;
-}
-
-.footer-content p {
-  margin: 20px;
-}
-.footer-bottom p {
-  font-size: 14px;
-  word-spacing: 2px;
-  text-align: center;
-  margin: 10px auto;
-}
-
-/*---- From homepage.css ---*/
-
-footer {
-  background: var(--primary-gradient-background);
-  text-decoration: none;
-  border-top: 1px solid #dee2e6;
-  color: var(--primary-text-color);
-  text-align: center;
-  padding: 24px;
-  max-height: 15%;
-  background-color: black;
-}
-
-footer a {
-  text-decoration: none;
-}
-
-.footer-content h3 {
-  font-size: 24px;
-  font-weight: 400;
-  text-transform: capitalize;
-  line-height: 48px;
-  height: 100px;
-}
-
-.footer-content p {
-  margin: 20px;
-}
-.footer-bottom p {
-  font-size: 14px;
-  word-spacing: 2px;
-  text-align: center;
-  margin: 10px auto;
-}
-
-
-/*---- From miski.css ---*/
-
-footer {
-  background: var(--primary-gradient-background);
-  text-decoration: none;
-  border-top: 1px solid #dee2e6;
-  color: var(--primary-text-color);
-  text-align: center;
-  padding: 24px;
-  max-height: 15%;
-  background-color: black;
-
-}
-
-footer a {
-  text-decoration: none;
-}
-
-.footer-content h3 {
-  font-size: 24px;
-  font-weight: 400;
-  text-transform: capitalize;
-  line-height: 48px;
-  height: 100px;
-}
-
-.footer-content p {
-  margin: 20px;
-
-}
-.footer-bottom p {
-  font-size: 14px;
-  word-spacing: 2px;
-  text-align: center;
-  margin: 10px auto;
-}
-
-/*---- From navigation.css ---*/
 
 .logo-mobile.footer {
   display: inline-block;
@@ -169,73 +59,12 @@ footer a {
   display: none;
 }
 
-/*---- From our-team.css ---*/
-
-footer {
-  background-color: black;
-  border-top: 1px solid #dee2e6;
-  color: var(--primary-text-color);
-  max-height: 15%;
-  padding: 24px;
-  text-align: center;
-  text-decoration: none;
+@media screen and (min-width: 991px) {
+  
+  .logo-mobile.header {
+    display: none;
+  }
+  .logo-mobile.footer {
+    display: inline-block;
+  }
 }
-
-footer a {
-  text-decoration: none;
-}
-
-.footer-content h3 {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 48px;
-  height: 100px;
-  text-transform: capitalize;
-}
-
-.footer-content p {
-  margin: 20px;
-}
-
-.footer-bottom p {
-  font-size: 14px;
-  margin: 10px auto;
-  text-align: center;
-  word-spacing: 2px;
-}
-
-/*---- From student.css ---*/
-
-footer {
-  background-color: black;
-  border-top: 1px solid #dee2e6;
-  color: var(--primary-text-color);
-  max-height: 15%;
-  padding: 24px;
-  text-align: center;
-  text-decoration: none;
-}
-
-footer a {
-  text-decoration: none;
-}
-
-.footer-content h3 {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 48px;
-  height: 100px;
-  text-transform: capitalize;
-}
-
-.footer-content p {
-  margin: 20px;
-}
-
-.footer-bottom p {
-  font-size: 14px;
-  margin: 10px auto;
-  text-align: center;
-  word-spacing: 2px;
-}
-
