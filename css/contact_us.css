@@ -65,6 +65,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: var(--background-color);
 }
 
 .field,
@@ -106,7 +107,7 @@ fieldset {
   justify-content: center;
   align-items: center;
   border: 3px solid white;
-  border-radius: 30px;
+  border-radius: 10px;
   margin: var(--spacing-large) var(--spacing-main);
   font-family: var(--primary-font-family);
   height: auto;
@@ -114,9 +115,9 @@ fieldset {
 }
 
 .send-button {
-  background-image: linear-gradient(#f8a4d8, #6d64ff);
+  background: none;
   border: 3px solid var(--primary-text-color);
-  border-radius: 30px;
+  border-radius: 10px;
   color: var(--primary-text-color);
   font-size: calc(0.8rem + 1vw);
   margin: 6px 12px;
