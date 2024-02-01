@@ -246,11 +246,11 @@ nav ul > li::before,
     display: inline-block;
   }
 
-  u li a:hover {
+  ul li a:hover {
     text-decoration: none;
   }
 
-  li a.active {
+  ul li a.active {
     text-decoration: none;
   }
 
