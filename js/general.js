@@ -35,5 +35,18 @@ $(() => {
     });
   };
 
+  const closeNavMenu = () => {
+    $(document).on("click", (event) => {
+      const isNavClick = $(event.target).closest("nav, .main-nav").length > 0;
+
+      if (!isNavClick) {
+        $("nav .main-nav ul").hide("active");
+        $("ul li, .submenu li, .submenu-2 li, .submenu-3 li").removeClass("active");
+        $(".nav-container").removeClass("added-padding");
+      }
+    });
+  };
+
+  closeNavMenu();
   navMenu();
 });
