@@ -57,10 +57,10 @@ $(() => {
   
     const showStaffInfo = (staff) => {
       const staffContent = $('.main-content').empty();
-      
+      //robel fixed the image path
         const profile= $(".main-content").append(`
         <div class="staff-container">
-          <img class="staff-img" src="${staffe.immmy}" alt="${staff.name}">
+          <img class="staff-img" src="${staff.img}" alt="${staff.name}">
           <h1 class="staff-text">${staff.name} </h1>  
           <h3 class="staff-role"> ${staff.role} </h3>
           <p class="staff-email"> Email: ${staff.email} </p> 
