@@ -62,7 +62,7 @@ main {
 
 .student,
 .company {
-    width: 12rem;
+  width: 12rem;
   transition: 1.2s all;
 }
 .student:hover,
@@ -320,6 +320,7 @@ body section.slideshow .detail .detail-item.active {
 @media screen and (min-width: 991px) {
   button {
     font-family: var(--primary-font-family);
+    font-size: 2rem;
   }
   .button {
     display: flex;
@@ -333,6 +334,7 @@ body section.slideshow .detail .detail-item.active {
     padding: 1.5rem;
   }
   .student,
-.company {
-    width: 15rem;}
+  .company {
+    width: 15rem;
+  }
 }
