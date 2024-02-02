@@ -193,7 +193,6 @@ h3 {
   color: var(--primary-text-color);
   height: 75%;
   max-width: 80%;
-  overflow: scroll;
   position: fixed;
   top: 10%;
   left: 10%;
