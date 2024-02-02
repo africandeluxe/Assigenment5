@@ -139,40 +139,59 @@ $(() => {
 
     students.forEach(student => {
       const profile = $(`
-          <div class="profile">
-            <img class="student-img" src="./../img/student-profile-img/${student.name}.jpg" alt="">
-            <h4>${student.name} ${student.lastname}</h4>
-            <p>${student.title}</p>
-            <button class="read-more">View Profile</button>
-          </div>
-        `);
+        <div class="profile">
+          <img class="student-img" src="./../img/student-profile-img/${student.name}.jpg" alt="">
+          <h4>${student.name} ${student.lastname}</h4>
+          <p>${student.title}</p>
+          <button class="read-more">View Profile</button>
+        </div>
+      `);
 
       profile.find('.read-more').on('click', () => {
         const modalContent = $(`
-            <div class="modal" id="modal">
-              <div class="modal-header">
-              <img class="modal-img" src="./../img/student-profile-img/${student.name}.jpg" alt="">
-                <div class="title">${student.name} ${student.lastname} 
-               </div>
-                <button class="close-button">&times;</button>
-              </div>
-              <div class="modal-body">
-              <h3>${student.title}</h3>
-                <p>About: ${student.about}</p>
-                </br>
-                <p>Experience: ${student.experience}</p>
-                </br>
-                <p><a href="${student.portfolio}"> ${student.portfolio}</a></p>
-              </div>
-            </div>
-            <div class="active" id="overlay"></div>
-          `);
+        <div class="modal" id="modal">
+          <div class="modal-header">
+            <img class="modal-img" src="./../img/student-profile-img/${student.name}.jpg" alt="">
+            <div class="title">${student.name} ${student.lastname}</div>
+            <button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            <h3>${student.title}</h3>
+            <p>About: ${student.about}</p>
+            <br>
+            <p>Experience: ${student.experience}</p>
+            <br>
+            <p><a href="${student.portfolio}">${student.portfolio}</a></p>
+          </div>
+        </div>
+        <div class="active" id="overlay"></div>
+      `);
 
-        modalContent.find('.close-button, #overlay').on('click', () => {
-          modalContent.removeClass('active');
-          $('#overlay').removeClass('active');
+        const closeModal = () => {
+          modalContent.removeClass("active");
+          $("#overlay").removeClass("active");
+          $(document).off("keydown", handleEscKey);
+          $(document).off("click", handleOutsideClick);
+          // re rendering the array
           showStudentInfo(arrayStudentObject);
-        });
+        };
+
+        const handleEscKey = (event) => {
+          if (event.key === "Escape") {
+            closeModal();
+          }
+        };
+
+        const handleOutsideClick = (event) => {
+          if ($(event.target).hasClass("active")) {
+            closeModal();
+          }
+        };
+
+        modalContent.find(".close-button, #overlay").on("click", closeModal);
+
+        $(document).on("keydown", handleEscKey);
+        $(document).on("click", handleOutsideClick);
 
         studentContent.empty().append(modalContent);
         modalContent.addClass('active');
