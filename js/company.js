@@ -210,10 +210,15 @@ $(() => {
     const options = $(dropdown).find(".menu li");
     const selected = $(dropdown).find(".selected");
 
-    select.on("click", () => {
+    select.on("click", (event) => {
+        event.stopPropagation();
       menu.toggleClass("menu-open");
       select.toggleClass("select-clicked");
       caret.toggleClass("caret-rotate");
+
+      dropdowns.not($(dropdown)).find(".menu").removeClass("menu-open");
+      dropdowns.not($(dropdown)).find(".select").removeClass("select-clicked");
+      dropdowns.not($(dropdown)).find(".caret").removeClass("caret-rotate");
     });
 
     options.on("click", (event) => {
@@ -227,6 +232,13 @@ $(() => {
       option.addClass("active");
     });
   });
+
+  $(document.body).on("click", () => {
+    dropdowns.find(".menu").removeClass("menu-open");
+    dropdowns.find(".select").removeClass("select-clicked");
+    dropdowns.find(".caret").removeClass("caret-rotate");
+  });
+  
 
   const filterMainFunction = (className, filterCategory, filterSpecificValue) => {
     //ex .profile , fulltime, true
