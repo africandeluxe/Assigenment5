@@ -271,10 +271,15 @@ $(() => {
     const options = $(dropdown).find(".menu li");
     const selected = $(dropdown).find(".selected");
 
-    select.on("click", () => {
-      menu.toggleClass("menu-open");
-      select.toggleClass("select-clicked");
-      caret.toggleClass("caret-rotate");
+    select.on('click', (event) => {
+      event.stopPropagation();
+      menu.toggleClass('menu-open');
+      select.toggleClass('select-clicked');
+      caret.toggleClass('caret-rotate');
+
+      dropdowns.not($(dropdown)).find(".menu").removeClass("menu-open");
+      dropdowns.not($(dropdown)).find(".select").removeClass("select-clicked");
+      dropdowns.not($(dropdown)).find(".caret").removeClass("caret-rotate");
     });
 
     options.on("click", (event) => {
@@ -289,10 +294,22 @@ $(() => {
     });
   });
 
-  const filterMainFunction = (className, filterCategory, filterSpecificValue) => {
-    $(className).on("click", () => {
-      $(".company-content").empty();
-      let filteredAnnouncements = ourCompanies.filter((company) => {
+  $(document.body).on("click", () => {
+    dropdowns.find(".menu").removeClass("menu-open");
+    dropdowns.find(".select").removeClass("select-clicked");
+    dropdowns.find(".caret").removeClass("caret-rotate");
+  });
+  
+
+  const filterMainFunction = (
+    className,
+    filterCategory,
+    filterSpecificValue
+  ) => {
+    
+    $(className).on('click', () => {
+      $('.company-content').empty();
+      let filteredAnnouncements = ourCompanies.filter(company => {
         return company[filterCategory] === filterSpecificValue;
       });
       showCompanyInfo(filteredAnnouncements);
