@@ -251,6 +251,16 @@ $(() => {
 
   initOriginalTextContent();
 
+  const resetFilterBtn = $(".reset-btn").on("click", (event) => {
+    showStudentInfo(arrayStudentObject);
+
+    const resetButton = $(event.currentTarget);
+    const dropdown = resetButton.closest(".dropdown");
+    const select = dropdown.find(".select");
+
+    select.find(".selected").text(select.data("originalText"));
+  });
+
   //fulltime
   filterMainFunction(".fulltime-true", "fulltime", true);
   filterMainFunction(".fulltime-false", "fulltime", false);
