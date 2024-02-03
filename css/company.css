@@ -275,6 +275,7 @@ button a {
         margin: 4px;
         transform: translateY(-4px);
     }
+    
 
     .profile {
         width: 30%;
@@ -309,7 +310,7 @@ button a {
     color: black;
   }
   .modal-body p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: black;
   }
   .modal-body h3 {

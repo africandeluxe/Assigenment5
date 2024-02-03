@@ -52,7 +52,7 @@ $(() => {
   );
   let Santuzza = new Student(
     'Santuzza',
-    'Marcello',
+    'Mello',
     'Front End Developer',
     'Rome',
     true,
@@ -62,7 +62,7 @@ $(() => {
   );
   let Adriano = new Student(
     'Adriano',
-    'Montana',
+    'Montan',
     'Back End Developer',
     'Rome',
     false,
@@ -82,7 +82,7 @@ $(() => {
   );
   let Romaine = new Student(
     'Romaine',
-    'Plourde',
+    'Purde',
     'App Developer',
     'Paris',
     true,
